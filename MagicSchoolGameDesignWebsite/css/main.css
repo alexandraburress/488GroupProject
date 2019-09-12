@@ -9,3 +9,8 @@ nav{
   margin-right: 2em;
   width:15em;
 }
+
+.flexColumn{
+  border: 2px solid black;
+  padding: 1em;
+}
