@@ -4,26 +4,31 @@ body{
   flex-direction: row;
 }
 
-nav{
-  /*border: 2px solid black;
-  */
-  margin-right: 2em;
-  width:15em;
 
-
-  border:solid 5px hsla(0, 95%, 35%, 1);
-}
-
-p{
+#navigation{
 
   display:inline-block;
+
   width:20%;
-  margin:5% auto;
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+/*  margin:5% auto;
+  */border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   padding:1em;
   line-height:1.5em;
   background:hsla(67, 95%, 95%, 1);
+
+
+
+  margin-right: 2em;
+  width:15em;
+  border:solid 5px hsla(0, 95%, 35%, 1);
 }
+
+#navigation ul{
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+}
+
 
 .flexColumn{
   border: 2px solid black;
@@ -34,4 +39,39 @@ background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,25
 background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 
+
+}
+
+.collapsible-menu label{
+
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 56px;
+    display: block;
+    cursor: pointer;
+    background: url(menu.png) no-repeat left center;
+    padding: 10px 0 10px 50px;
+}
+
+
+input#text-menu{
+  display: none;
+}
+
+input:checked +label {
+    background-image: url(../images/curry.png);
+}
+
+.menu-content {
+    max-height: 0;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif;
+    padding: 0 0 0 50px;
+}
+
+/* Toggle Effect */input:checked ~ label {
+    background-image: url(../images/curry.png);
+}
+
+input:checked ~ .menu-content {
+    max-height: 100%;
 }
