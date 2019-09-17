@@ -67,11 +67,6 @@ input#text-menu{
 }
 
 
-input:checked + label {
-    background-image: url(../images/noodle.png);
-}
-
-
 /* Toggle Effect */
 input:checked ~ label {
     background-image: url(../images/curry.png);
