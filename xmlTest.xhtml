@@ -29,7 +29,7 @@ if (window.ActiveXObject || xhttp.responseType == "msxml-document")
  document.getElementById("example").innerHTML = ex;
  }
 // code for Chrome, Firefox, Opera, etc.
-else
+else if (document.implementation)
  {
  xsltProcessor = new XSLTProcessor();
  xsltProcessor.importStylesheet(xsl);
