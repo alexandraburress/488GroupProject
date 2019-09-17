@@ -48,7 +48,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     font-size: 56px;
     display: block;
     cursor: pointer;
-    background: url(menu.png) no-repeat left center;
+    background: url(../images/noodle.png) no-repeat left center;
     padding: 10px 0 10px 50px;
 }
 
@@ -57,18 +57,23 @@ input#text-menu{
   display: none;
 }
 
-input:checked +label {
-    background-image: url(../images/curry.png);
-}
-
 .menu-content {
-    max-height: 0;
+
+      max-height: 0;
     overflow: hidden;
     font-family: 'Oswald', sans-serif;
     padding: 0 0 0 50px;
+
 }
 
-/* Toggle Effect */input:checked ~ label {
+
+input:checked + label {
+    background-image: url(../images/noodle.png);
+}
+
+
+/* Toggle Effect */
+input:checked ~ label {
     background-image: url(../images/curry.png);
 }
 
