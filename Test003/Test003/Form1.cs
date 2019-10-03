@@ -15,15 +15,27 @@ namespace Test003
     {
         Story myStory;
         Boolean eventBoxActive = false;
-        
+        List<Story> allStories = new List<Story>();
+        int storySelection = 0;
 
-        public Form1(Story inportStory,int position)
+
+        public Form1(Story inportStory, int position=0)
         {
             InitializeComponent();
             myStory = inportStory;
-            
+
         }
-        
+
+        public Form1(List<Story> inportStory, int position=0)
+        {
+            InitializeComponent();
+            //in case of multiple stories, start at the first story
+            allStories = inportStory;
+            myStory = inportStory[storySelection];
+
+
+        }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -116,20 +128,15 @@ namespace Test003
             Bitmap currentBackgroundImage = myStory.BackgroundPicture[num];
             Occurance currentOccurence = myStory.StoryOccurances[num];
 
-
-            
-
             //update images
             if (currentMiddleCharacterImage != null)
             {
                 middleCharacterBoxImage.Image = currentMiddleCharacterImage;
-
             }
 
             if (currentBackgroundImage != null)
             {
                 backgroundImage.Image = currentBackgroundImage;
-
             }
 
 

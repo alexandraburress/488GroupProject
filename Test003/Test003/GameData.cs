@@ -59,6 +59,8 @@ namespace Test003
 
             //resize arrays based on new testText file size
             myStory.updateImageArraySizes();
+
+
             myStory.addMiddleCharacterImage(0, 0, Properties.Resources.James_Green_Think_full);
             myStory.addMiddleCharacterImage(1, 2, Properties.Resources.James_Green_Vashoom_full);
             myStory.addMiddleCharacterImage(3, 3, Properties.Resources.pumpernickel001);
@@ -68,6 +70,25 @@ namespace Test003
 
             Item testItem = new Item("Test Item");
             myStory.findItem(6,testItem);
+
+            return myStory;
+        }
+
+/*        public static Story initilizeMagicSchool()
+        {
+            Story myStory = initilizeStory("MagicSchool.txt");
+
+
+
+            return myStory;
+        }
+        */
+
+        public static Story initilizeStory(string storyFile)
+        {
+            Story myStory= inportStoryFile(storyFile);
+            //resize arrays based on new testText file size
+            myStory.updateImageArraySizes();
 
             return myStory;
         }

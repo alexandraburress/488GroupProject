@@ -13,6 +13,8 @@ namespace Test003
     public partial class Map : Form
     {
         Story glamorLairStory =GameData.initilizeGlamorHobosAdventure();
+        Story dressUpMagicSchoolStory = GameData.initilizeStory("MagicSchool.txt");
+        Story henrysFirstSchoolDay = GameData.initilizeStory("HenrysFirstDayOfSchool.txt");
 
         public Map()
         {
@@ -63,6 +65,12 @@ namespace Test003
             Form1 openWorld = new Form1(glamorLairStory,position);
             openWorld.ShowDialog();
 
+        }
+
+        private void dressUpGameButton_Click(object sender, EventArgs e)
+        {
+            Form1 glamorLair = new Form1(dressUpMagicSchoolStory, 0);
+            glamorLair.ShowDialog();
         }
     }
 }
