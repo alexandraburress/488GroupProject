@@ -42,7 +42,10 @@ namespace Test003
 
             backgroundImage.Controls.Add(middleCharacterBoxImage);
             middleCharacterBoxImage.BackColor = Color.Transparent;
-            
+
+            //if I've changed position 0 I need to reload anyway
+            checkForImageChange();
+
             outputLbl.Text = myStory.start();
 
         }
@@ -179,6 +182,11 @@ namespace Test003
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

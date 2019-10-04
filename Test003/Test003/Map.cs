@@ -13,12 +13,24 @@ namespace Test003
     public partial class Map : Form
     {
         Story glamorLairStory =GameData.initilizeGlamorHobosAdventure();
-        Story dressUpMagicSchoolStory = GameData.initilizeStory("MagicSchool.txt");
-        Story henrysFirstSchoolDay = GameData.initilizeStory("HenrysFirstDayOfSchool.txt");
+        List<Story> magicSchoolStories = new List<Story>();
 
         public Map()
         {
             InitializeComponent();
+
+            
+            Story dressUpMagicSchoolStory = GameData.initilizeStory("MagicSchool.txt");
+            dressUpMagicSchoolStory.addBackgroundImage(0,2, Properties.Resources.PumpkinFarm001);
+            dressUpMagicSchoolStory.addMiddleCharacterImage(0, 2, Properties.Resources.FarmerFamilyGroupScene);
+            //dressUpMagicSchoolStory.updateStory();
+
+            Story henrysFirstSchoolDay = GameData.initilizeStory("HenrysFirstDayOfSchool.txt");
+
+            magicSchoolStories.Add(dressUpMagicSchoolStory);
+            magicSchoolStories.Add(henrysFirstSchoolDay);
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -69,7 +81,7 @@ namespace Test003
 
         private void dressUpGameButton_Click(object sender, EventArgs e)
         {
-            Form1 glamorLair = new Form1(dressUpMagicSchoolStory, 0);
+            Form1 glamorLair = new Form1(magicSchoolStories);
             glamorLair.ShowDialog();
         }
     }

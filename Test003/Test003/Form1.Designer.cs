@@ -34,20 +34,22 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.middleCharacterBoxImage = new System.Windows.Forms.PictureBox();
-            this.backgroundImage = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.prevButton = new System.Windows.Forms.Button();
             this.nextBtn = new System.Windows.Forms.Button();
             this.eventAlertPanel = new System.Windows.Forms.Panel();
             this.eventOutputLbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.middleCharacterBoxImage = new System.Windows.Forms.PictureBox();
+            this.backgroundImage = new System.Windows.Forms.PictureBox();
+            this.foregroundImage = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.middleCharacterBoxImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.eventAlertPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.middleCharacterBoxImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).BeginInit();
             this.SuspendLayout();
             // 
             // outputLbl
@@ -73,6 +75,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(722, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -87,46 +90,21 @@
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.saveToolStripMenuItem.Text = "Save";
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.loadToolStripMenuItem.Text = "Load";
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
-            // 
-            // middleCharacterBoxImage
-            // 
-            this.middleCharacterBoxImage.BackColor = System.Drawing.Color.Transparent;
-            this.middleCharacterBoxImage.Image = global::Test003.Properties.Resources.James_Green_Think_full;
-            this.middleCharacterBoxImage.Location = new System.Drawing.Point(178, 51);
-            this.middleCharacterBoxImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.middleCharacterBoxImage.Name = "middleCharacterBoxImage";
-            this.middleCharacterBoxImage.Size = new System.Drawing.Size(376, 390);
-            this.middleCharacterBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.middleCharacterBoxImage.TabIndex = 3;
-            this.middleCharacterBoxImage.TabStop = false;
-            this.middleCharacterBoxImage.Click += new System.EventHandler(this.middleCharacterBoxImage_Click);
-            // 
-            // backgroundImage
-            // 
-            this.backgroundImage.Image = global::Test003.Properties.Resources.GlamorLair001;
-            this.backgroundImage.Location = new System.Drawing.Point(22, 51);
-            this.backgroundImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.backgroundImage.Name = "backgroundImage";
-            this.backgroundImage.Size = new System.Drawing.Size(678, 390);
-            this.backgroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.backgroundImage.TabIndex = 2;
-            this.backgroundImage.TabStop = false;
-            this.backgroundImage.Click += new System.EventHandler(this.backgroundImage_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -192,12 +170,49 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
+            // middleCharacterBoxImage
+            // 
+            this.middleCharacterBoxImage.BackColor = System.Drawing.Color.Transparent;
+            this.middleCharacterBoxImage.Image = global::Test003.Properties.Resources.James_Green_Think_full;
+            this.middleCharacterBoxImage.Location = new System.Drawing.Point(178, 51);
+            this.middleCharacterBoxImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.middleCharacterBoxImage.Name = "middleCharacterBoxImage";
+            this.middleCharacterBoxImage.Size = new System.Drawing.Size(376, 390);
+            this.middleCharacterBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.middleCharacterBoxImage.TabIndex = 3;
+            this.middleCharacterBoxImage.TabStop = false;
+            this.middleCharacterBoxImage.Click += new System.EventHandler(this.middleCharacterBoxImage_Click);
+            // 
+            // backgroundImage
+            // 
+            this.backgroundImage.Image = global::Test003.Properties.Resources.GlamorLair001;
+            this.backgroundImage.Location = new System.Drawing.Point(22, 51);
+            this.backgroundImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.backgroundImage.Name = "backgroundImage";
+            this.backgroundImage.Size = new System.Drawing.Size(678, 390);
+            this.backgroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.backgroundImage.TabIndex = 2;
+            this.backgroundImage.TabStop = false;
+            this.backgroundImage.Click += new System.EventHandler(this.backgroundImage_Click);
+            // 
+            // foregroundImage
+            // 
+            this.foregroundImage.Image = global::Test003.Properties.Resources.GlamorLair001;
+            this.foregroundImage.Location = new System.Drawing.Point(22, 51);
+            this.foregroundImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.foregroundImage.Name = "foregroundImage";
+            this.foregroundImage.Size = new System.Drawing.Size(678, 390);
+            this.foregroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.foregroundImage.TabIndex = 8;
+            this.foregroundImage.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(722, 666);
+            this.Controls.Add(this.foregroundImage);
             this.Controls.Add(this.eventAlertPanel);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.middleCharacterBoxImage);
@@ -212,11 +227,12 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.middleCharacterBoxImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.eventAlertPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.middleCharacterBoxImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,6 +254,7 @@
         private System.Windows.Forms.Panel eventAlertPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label eventOutputLbl;
+        private System.Windows.Forms.PictureBox foregroundImage;
     }
 }
 

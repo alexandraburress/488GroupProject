@@ -13,6 +13,8 @@ namespace Test003
     {
         List<string> text = new List<string>();
         Boolean timingEvents = true;
+        //Boolean foregroundOn = false;
+        List<Boolean> foregroundOnList = new List<Boolean>();
 
         public Story(List<string> storyText)
         {
@@ -20,6 +22,8 @@ namespace Test003
             text = storyText;
             MiddleCharacterPicture = new Bitmap[storyText.Count];
             BackgroundPicture = new Bitmap[storyText.Count];
+            ForegroundPicture = new Bitmap[storyText.Count];
+            
 
 
         }
@@ -31,10 +35,26 @@ namespace Test003
             StoryOccurances = new Occurance[text.Count];
         }
 
+        /*
+         * Added images aren't updating if they are in the first slot. 
+         * I need to refresh the info before it loads
+        */
+        public void updateStory()
+        {
+        }
+
         public void addMiddleCharacterImage(int imagePositionStart, int imagePositionEnd, Bitmap image)
         {
             MiddleCharacterPicture[imagePositionStart] = image;
             MiddleCharacterPicture[imagePositionEnd] = image;
+
+        }
+
+        //middle character with default to one frame if not specified
+        public void addMiddleCharacterImage(int imagePosition, Bitmap image)
+        {
+
+            addMiddleCharacterImage(imagePosition, imagePosition, image);
 
         }
 
@@ -44,6 +64,27 @@ namespace Test003
             BackgroundPicture[imagePositionEnd] = image;
 
         }
+
+
+        //if there is no end position specified, then consider it a one frame image
+        public void addBackgroundImage(int imagePosition, Bitmap image)
+        {
+            addBackgroundImage(imagePosition,imagePosition,image);
+        }
+
+
+        public void addForegroundImage(int imagePosition, int imagePositionEnd, Bitmap image)
+        {
+            ForegroundPicture[imagePosition] = image;
+            ForegroundPicture[imagePositionEnd] = image;
+
+        }
+
+        public void addForegroundImage(int imagePosition, Bitmap image)
+        {
+            addForegroundImage(imagePosition, imagePosition, image);
+        }
+
 
 
         public void addOccurance(int storyLocation, Occurance myOccurance)
@@ -62,6 +103,12 @@ namespace Test003
             get;
             set;
 
+        }
+
+        public Bitmap[] ForegroundPicture
+        {
+            get;
+            set;
         }
 
         public Bitmap[] BackgroundPicture
@@ -167,6 +214,18 @@ namespace Test003
 
         }
 
+        /*
+        public void turnForegroundOn()
+        {
+            foregroundOn = true;
+
+        }
+
+        public void turnForegroundOff()
+        {
+            foregroundOn = false;
+        }
+        */
 
     }
 }
