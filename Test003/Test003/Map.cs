@@ -21,9 +21,9 @@ namespace Test003
 
             
             Story dressUpMagicSchoolStory = GameData.initilizeStory("MagicSchool.txt");
-            dressUpMagicSchoolStory.addBackgroundImage(0,2, Properties.Resources.PumpkinFarm001);
-            dressUpMagicSchoolStory.addMiddleCharacterImage(0, 2, Properties.Resources.FarmerFamilyGroupScene);
-            //dressUpMagicSchoolStory.updateStory();
+            dressUpMagicSchoolStory.addBackgroundImage(0, Properties.Resources.PumpkinFarm001);
+            dressUpMagicSchoolStory.addMiddleCharacterImage(0, Properties.Resources.farmerMother001);
+            dressUpMagicSchoolStory.addBackgroundImage(1, Properties.Resources.TownFestival001);
 
             Story henrysFirstSchoolDay = GameData.initilizeStory("HenrysFirstDayOfSchool.txt");
 

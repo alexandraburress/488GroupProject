@@ -13,8 +13,6 @@ namespace Test003
     {
         List<string> text = new List<string>();
         Boolean timingEvents = true;
-        //Boolean foregroundOn = false;
-        List<Boolean> foregroundOnList = new List<Boolean>();
 
         public Story(List<string> storyText)
         {
@@ -23,7 +21,6 @@ namespace Test003
             MiddleCharacterPicture = new Bitmap[storyText.Count];
             BackgroundPicture = new Bitmap[storyText.Count];
             ForegroundPicture = new Bitmap[storyText.Count];
-            
 
 
         }
@@ -32,27 +29,23 @@ namespace Test003
         {
             MiddleCharacterPicture = new Bitmap[text.Count];
             BackgroundPicture = new Bitmap[text.Count];
+            ForegroundPicture = new Bitmap[text.Count];
             StoryOccurances = new Occurance[text.Count];
+            TextEndPosition = text.Count;
         }
 
-        /*
-         * Added images aren't updating if they are in the first slot. 
-         * I need to refresh the info before it loads
-        */
-        public void updateStory()
-        {
-        }
+   
 
         public void addMiddleCharacterImage(int imagePositionStart, int imagePositionEnd, Bitmap image)
         {
-            MiddleCharacterPicture[imagePositionStart] = image;
-            MiddleCharacterPicture[imagePositionEnd] = image;
+            imageArrayVisableLoop(MiddleCharacterPicture, imagePositionStart, imagePositionEnd, image);
 
-        }
+            }
 
         //middle character with default to one frame if not specified
         public void addMiddleCharacterImage(int imagePosition, Bitmap image)
         {
+
 
             addMiddleCharacterImage(imagePosition, imagePosition, image);
 
@@ -60,8 +53,7 @@ namespace Test003
 
         public void addBackgroundImage(int imagePosition, int imagePositionEnd, Bitmap image)
         {
-            BackgroundPicture[imagePosition] = image;
-            BackgroundPicture[imagePositionEnd] = image;
+            BackgroundPicture=imageArrayVisableLoop(BackgroundPicture, imagePosition, imagePositionEnd, image);
 
         }
 
@@ -75,8 +67,10 @@ namespace Test003
 
         public void addForegroundImage(int imagePosition, int imagePositionEnd, Bitmap image)
         {
-            ForegroundPicture[imagePosition] = image;
-            ForegroundPicture[imagePositionEnd] = image;
+            //subtract position end from position start and loop though those numbers.
+
+            imageArrayVisableLoop(ForegroundPicture, imagePosition, imagePositionEnd, image);
+
 
         }
 
@@ -85,11 +79,46 @@ namespace Test003
             addForegroundImage(imagePosition, imagePosition, image);
         }
 
+        private Bitmap[] imageArrayVisableLoop(Bitmap[] imageArray, int imagePosition, int imagePositionEnd, Bitmap image)
+        {
+            int count = imagePositionEnd - imagePosition;
+            try
+            {
+                for (int i = 0; i <= count; i++)
+                {
+                    imageArray[imagePosition + i] = image;
+                    //ForegroundPictureOn[imagePosition + i] = true;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                string message = "";
+                if (0 > count)
+                {
+                    message = "End Position Lower then Start position\n";
+                }
+                message += ex.Message;
+
+                MessageBox.Show(message);
+
+            }
+
+            return imageArray;
+        }
+
 
 
         public void addOccurance(int storyLocation, Occurance myOccurance)
         {
             StoryOccurances[storyLocation] = myOccurance;
+        }
+
+        public int TextEndPosition
+        {
+            get;
+            set;
         }
 
         public int Position
@@ -106,6 +135,12 @@ namespace Test003
         }
 
         public Bitmap[] ForegroundPicture
+        {
+            get;
+            set;
+        }
+
+        public Boolean[] ForegroundPictureOn
         {
             get;
             set;
@@ -214,18 +249,6 @@ namespace Test003
 
         }
 
-        /*
-        public void turnForegroundOn()
-        {
-            foregroundOn = true;
-
-        }
-
-        public void turnForegroundOff()
-        {
-            foregroundOn = false;
-        }
-        */
 
     }
 }

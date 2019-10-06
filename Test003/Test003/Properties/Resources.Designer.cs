@@ -83,6 +83,16 @@ namespace Test003.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap farmerMother001 {
+            get {
+                object obj = ResourceManager.GetObject("farmerMother001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GlamorLair001 {
             get {
                 object obj = ResourceManager.GetObject("GlamorLair001", resourceCulture);
@@ -136,6 +146,16 @@ namespace Test003.Properties {
         internal static System.Drawing.Bitmap ShieldsKitchen {
             get {
                 object obj = ResourceManager.GetObject("ShieldsKitchen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TownFestival001 {
+            get {
+                object obj = ResourceManager.GetObject("TownFestival001", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

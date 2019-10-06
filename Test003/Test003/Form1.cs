@@ -14,6 +14,7 @@ namespace Test003
     public partial class Form1 : Form
     {
         Story myStory;
+        Story nextStory;
         Boolean eventBoxActive = false;
         List<Story> allStories = new List<Story>();
         int storySelection = 0;
@@ -39,7 +40,8 @@ namespace Test003
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //default foreground to false
+            foregroundImage.Visible = false;
             backgroundImage.Controls.Add(middleCharacterBoxImage);
             middleCharacterBoxImage.BackColor = Color.Transparent;
 
@@ -130,11 +132,21 @@ namespace Test003
             Bitmap currentMiddleCharacterImage = myStory.MiddleCharacterPicture[num];
             Bitmap currentBackgroundImage = myStory.BackgroundPicture[num];
             Occurance currentOccurence = myStory.StoryOccurances[num];
+            
+            //combined Foreground Image 
+            Bitmap currentForegroundImage = myStory.ForegroundPicture[num];
+            //Boolean currentForegroundImageOn = myStory.ForegroundPictureOn[num];
 
             //update images
             if (currentMiddleCharacterImage != null)
             {
+                middleCharacterBoxImage.Visible = true;
                 middleCharacterBoxImage.Image = currentMiddleCharacterImage;
+            }
+            else
+            {
+                middleCharacterBoxImage.Visible = false;
+
             }
 
             if (currentBackgroundImage != null)
@@ -142,6 +154,15 @@ namespace Test003
                 backgroundImage.Image = currentBackgroundImage;
             }
 
+            if (currentForegroundImage != null)
+            {
+                foregroundImage.Visible = true;
+                foregroundImage.Image = currentForegroundImage;
+            }
+            else
+            {
+                foregroundImage.Visible = false;
+            }
 
             //check for events 
 
@@ -155,6 +176,13 @@ namespace Test003
                 eventOutputLbl.Text = currentOccurence.Name + "\n" + currentOccurence.Description;
                 occuranceSwitch(true);
                 currentOccurence.Occured = true;
+            }
+            if (myStory.Position== myStory.TextEndPosition-1)
+            { 
+                MessageBox.Show("Default next text file"); 
+                nextStory=allStories[storySelection];
+
+
             }
             
 
@@ -187,6 +215,16 @@ namespace Test003
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void foregroundImage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void selectOption()
         {
 
         }
