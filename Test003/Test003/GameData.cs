@@ -27,10 +27,10 @@ namespace Test003
         //plots from various files
 
         //INport story file
-        private static Story inportStoryFile(string fileName)
+        private static Story inportStoryFile(string fileName, Boolean hasBranchingChoices = false)
         {
             List<string> testText = new List<string>();
-            Story myStory = new Story(testText);
+            Story myStory = new Story(testText, hasBranchingChoices);
 
 
             StreamReader inputFile = File.OpenText(fileName);
@@ -74,19 +74,10 @@ namespace Test003
             return myStory;
         }
 
-/*        public static Story initilizeMagicSchool()
+
+        public static Story initilizeStory(string storyFile,Boolean hasBranchingChoices = false)
         {
-            Story myStory = initilizeStory("MagicSchool.txt");
-
-
-
-            return myStory;
-        }
-        */
-
-        public static Story initilizeStory(string storyFile)
-        {
-            Story myStory= inportStoryFile(storyFile);
+            Story myStory= inportStoryFile(storyFile, hasBranchingChoices);
             //resize arrays based on new testText file size
             myStory.updateImageArraySizes();
 

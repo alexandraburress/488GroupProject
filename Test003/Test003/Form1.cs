@@ -40,7 +40,7 @@ namespace Test003
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //default foreground to false
+              //default foreground to false
             foregroundImage.Visible = false;
             backgroundImage.Controls.Add(middleCharacterBoxImage);
             middleCharacterBoxImage.BackColor = Color.Transparent;
@@ -54,40 +54,9 @@ namespace Test003
 
         private void label1_Click(object sender, EventArgs e)
         {
-            if (eventBoxActive == false)
-            {
-                outputLbl.Text = myStory.next();
-            }
-
-            checkForImageChange();
-
-
+            next();
         }
 
-        private void backgroundImage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void middleCharacterBoxImage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void leftPictureBox_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -95,17 +64,15 @@ namespace Test003
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void nextBtn_Click(object sender, EventArgs e)
+        {
+            next();
+
+        }
+
+        private void next()
         {
             if (eventBoxActive == false)
             {
@@ -113,7 +80,6 @@ namespace Test003
             }
 
             checkForImageChange();
-
         }
 
         private void prevButton_Click(object sender, EventArgs e)
@@ -121,6 +87,12 @@ namespace Test003
             if (eventBoxActive == false)
             {
                 outputLbl.Text = myStory.last();
+            }
+
+            if (buttonOptionBox.Visible==true)
+            {
+                buttonOptionBox.Visible = false;
+
             }
 
             checkForImageChange();
@@ -177,9 +149,9 @@ namespace Test003
                 occuranceSwitch(true);
                 currentOccurence.Occured = true;
             }
-            if (myStory.Position== myStory.TextEndPosition-1)
-            { 
-                MessageBox.Show("Default next text file"); 
+            if (myStory.Position==myStory.TextEndPosition-1 && myStory.HasChoices==true)
+            {
+                showMultipleChoiceRoutes();
                 nextStory=allStories[storySelection];
 
 
@@ -195,38 +167,85 @@ namespace Test003
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+
+
+
+        public void showMultipleChoiceRoutes()
         {
+            buttonOptionBox.Visible = true;
+            int i = 0;
+
+            Choice[] choices = myStory.Choices;
+
+                foreach (var button in buttonOptionBox.Controls.OfType<Button>())
+                {
+
+                    if (choices[i] == null)
+                    {
+
+                        button.Text = "This test should only appear when there is no choice in here "+i;
+                        button.Visible = false;
+
+                    }
+                    else
+                    {
+
+                        button.Text = choices[i].ButtonText;
+                        button.Visible = true;
+                }
+                if(i<2)
+                {
+                    i++;
+
+                }
+
+
+                }
+
 
         }
 
-        private void pictureBox1_Click_1(object sender, EventArgs e)
+        private void multipleChoiceABtn_Click(object sender, EventArgs e)
         {
+            selectNextStory(0);
 
         }
 
-        private void eventAlertPanel_Paint(object sender, PaintEventArgs e)
+        private void multipleChoiceBBtn_Click(object sender, EventArgs e)
         {
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
+            selectNextStory(1);
 
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void multipleChoiceCBtn_Click(object sender, EventArgs e)
         {
-
+            selectNextStory(2);
         }
-
-        private void foregroundImage_Click(object sender, EventArgs e)
+        
+        private void selectNextStory(int arrayPosition)
         {
+            if (myStory.Choices[arrayPosition]!=null)
+            {
+                //set next story
+                Story myNextStory = myStory.Choices[arrayPosition].Story;
+                MessageBox.Show(myStory.Choices[arrayPosition].Filename);
 
-        }
+                //if I've changed position 0 I need to reload anyway
+                
+                myStory = myNextStory;
+                myStory.Position = 0;
+                checkForImageChange();
 
-        private void selectOption()
-        {
 
+                outputLbl.Text = myStory.start();
+                buttonOptionBox.Visible = false;
+            }
+            else
+            {
+
+                MessageBox.Show("No vailid option connected to this button, please select another (or, Anna, YOU can fix this)");
+
+            }
         }
     }
 }

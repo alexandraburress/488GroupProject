@@ -20,12 +20,17 @@ namespace Test003
             InitializeComponent();
 
             
-            Story dressUpMagicSchoolStory = GameData.initilizeStory("MagicSchool.txt");
+            Story dressUpMagicSchoolStory = GameData.initilizeStory("MagicSchool.txt",true);
             dressUpMagicSchoolStory.addBackgroundImage(0, Properties.Resources.PumpkinFarm001);
             dressUpMagicSchoolStory.addMiddleCharacterImage(0, Properties.Resources.farmerMother001);
             dressUpMagicSchoolStory.addBackgroundImage(1, Properties.Resources.TownFestival001);
+            
 
             Story henrysFirstSchoolDay = GameData.initilizeStory("HenrysFirstDayOfSchool.txt");
+
+
+            Choice choiceGoToGirlsSchool = new Choice("HenrysFirstDayOfSchool.txt", "Go To Girl's School", henrysFirstSchoolDay);
+            dressUpMagicSchoolStory.branchStory(choiceGoToGirlsSchool);
 
             magicSchoolStories.Add(dressUpMagicSchoolStory);
             magicSchoolStories.Add(henrysFirstSchoolDay);
@@ -83,6 +88,16 @@ namespace Test003
         {
             Form1 glamorLair = new Form1(magicSchoolStories);
             glamorLair.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Map_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

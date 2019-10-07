@@ -14,24 +14,35 @@ namespace Test003
         List<string> text = new List<string>();
         Boolean timingEvents = true;
 
-        public Story(List<string> storyText)
+        public Story(List<string> storyText,Boolean choicesOn=false)
         {
             Position = 0;
             text = storyText;
+            HasChoices = choicesOn;
+
             MiddleCharacterPicture = new Bitmap[storyText.Count];
             BackgroundPicture = new Bitmap[storyText.Count];
             ForegroundPicture = new Bitmap[storyText.Count];
-
 
         }
 
         public void updateImageArraySizes()
         {
-            MiddleCharacterPicture = new Bitmap[text.Count];
-            BackgroundPicture = new Bitmap[text.Count];
-            ForegroundPicture = new Bitmap[text.Count];
-            StoryOccurances = new Occurance[text.Count];
-            TextEndPosition = text.Count;
+            int sum = text.Count;
+            if (HasChoices == true)
+            {
+                sum += 1;
+
+            }
+
+            MiddleCharacterPicture = new Bitmap[sum];
+            BackgroundPicture = new Bitmap[sum];
+            ForegroundPicture = new Bitmap[sum];
+            StoryOccurances = new Occurance[sum];
+            TextEndPosition = sum;
+
+            //Choices Array should be set to 3 locations
+            Choices = new Choice[3];
         }
 
    
@@ -160,6 +171,19 @@ namespace Test003
 
         }
 
+        public Choice[] Choices
+        {
+            get;
+            set;
+        }
+
+        public Boolean HasChoices
+        {
+            get;
+            set;
+
+        }
+
         public string start()
         {
             Position = 0;
@@ -246,6 +270,16 @@ namespace Test003
 
             Occurance output= new Occurance(name, description, image);
             addOccurance(storyLocation,output);
+
+        }
+
+        public void branchStory(Choice choiceA, Choice choiceB=null,Choice choiceC=null)
+        {
+            Choices[0] = choiceA;
+            Choices[1] = choiceB;
+            Choices[2] = choiceC;
+
+            text.Add("Please Select What You Will Do Next");
 
         }
 

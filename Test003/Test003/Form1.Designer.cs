@@ -39,17 +39,22 @@
             this.nextBtn = new System.Windows.Forms.Button();
             this.eventAlertPanel = new System.Windows.Forms.Panel();
             this.eventOutputLbl = new System.Windows.Forms.Label();
-            this.foregroundImage = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.foregroundImage = new System.Windows.Forms.PictureBox();
             this.middleCharacterBoxImage = new System.Windows.Forms.PictureBox();
             this.backgroundImage = new System.Windows.Forms.PictureBox();
+            this.buttonOptionBox = new System.Windows.Forms.FlowLayoutPanel();
+            this.multipleChoiceABtn = new System.Windows.Forms.Button();
+            this.multipleChoiceBBtn = new System.Windows.Forms.Button();
+            this.multipleChoiceCBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.eventAlertPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.middleCharacterBoxImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).BeginInit();
+            this.buttonOptionBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // outputLbl
@@ -75,7 +80,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(722, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -115,7 +119,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(284, 51);
             this.flowLayoutPanel1.TabIndex = 6;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // prevButton
             // 
@@ -149,7 +152,6 @@
             this.eventAlertPanel.Size = new System.Drawing.Size(277, 223);
             this.eventAlertPanel.TabIndex = 7;
             this.eventAlertPanel.Visible = false;
-            this.eventAlertPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.eventAlertPanel_Paint);
             // 
             // eventOutputLbl
             // 
@@ -158,7 +160,15 @@
             this.eventOutputLbl.Name = "eventOutputLbl";
             this.eventOutputLbl.Size = new System.Drawing.Size(275, 97);
             this.eventOutputLbl.TabIndex = 2;
-            this.eventOutputLbl.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(51, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 84);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // foregroundImage
             // 
@@ -170,17 +180,6 @@
             this.foregroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.foregroundImage.TabIndex = 8;
             this.foregroundImage.TabStop = false;
-            this.foregroundImage.Click += new System.EventHandler(this.foregroundImage_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(51, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 84);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // middleCharacterBoxImage
             // 
@@ -193,7 +192,6 @@
             this.middleCharacterBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.middleCharacterBoxImage.TabIndex = 3;
             this.middleCharacterBoxImage.TabStop = false;
-            this.middleCharacterBoxImage.Click += new System.EventHandler(this.middleCharacterBoxImage_Click);
             // 
             // backgroundImage
             // 
@@ -205,7 +203,48 @@
             this.backgroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.backgroundImage.TabIndex = 2;
             this.backgroundImage.TabStop = false;
-            this.backgroundImage.Click += new System.EventHandler(this.backgroundImage_Click);
+            // 
+            // buttonOptionBox
+            // 
+            this.buttonOptionBox.Controls.Add(this.multipleChoiceABtn);
+            this.buttonOptionBox.Controls.Add(this.multipleChoiceBBtn);
+            this.buttonOptionBox.Controls.Add(this.multipleChoiceCBtn);
+            this.buttonOptionBox.Location = new System.Drawing.Point(132, 103);
+            this.buttonOptionBox.Name = "buttonOptionBox";
+            this.buttonOptionBox.Padding = new System.Windows.Forms.Padding(20, 5, 20, 20);
+            this.buttonOptionBox.Size = new System.Drawing.Size(478, 294);
+            this.buttonOptionBox.TabIndex = 9;
+            this.buttonOptionBox.Visible = false;
+            // 
+            // multipleChoiceABtn
+            // 
+            this.multipleChoiceABtn.Location = new System.Drawing.Point(23, 8);
+            this.multipleChoiceABtn.Name = "multipleChoiceABtn";
+            this.multipleChoiceABtn.Size = new System.Drawing.Size(440, 85);
+            this.multipleChoiceABtn.TabIndex = 0;
+            this.multipleChoiceABtn.Text = "button1";
+            this.multipleChoiceABtn.UseVisualStyleBackColor = true;
+            this.multipleChoiceABtn.Click += new System.EventHandler(this.multipleChoiceABtn_Click);
+            // 
+            // multipleChoiceBBtn
+            // 
+            this.multipleChoiceBBtn.Location = new System.Drawing.Point(23, 99);
+            this.multipleChoiceBBtn.Name = "multipleChoiceBBtn";
+            this.multipleChoiceBBtn.Size = new System.Drawing.Size(440, 85);
+            this.multipleChoiceBBtn.TabIndex = 1;
+            this.multipleChoiceBBtn.Text = "button2";
+            this.multipleChoiceBBtn.UseVisualStyleBackColor = true;
+            this.multipleChoiceBBtn.Click += new System.EventHandler(this.multipleChoiceBBtn_Click);
+            // 
+            // multipleChoiceCBtn
+            // 
+            this.multipleChoiceCBtn.Location = new System.Drawing.Point(23, 190);
+            this.multipleChoiceCBtn.Name = "multipleChoiceCBtn";
+            this.multipleChoiceCBtn.Size = new System.Drawing.Size(440, 85);
+            this.multipleChoiceCBtn.TabIndex = 2;
+            this.multipleChoiceCBtn.Text = "button3";
+            this.multipleChoiceCBtn.UseVisualStyleBackColor = true;
+            this.multipleChoiceCBtn.Click += new System.EventHandler(this.multipleChoiceCBtn_Click);
             // 
             // Form1
             // 
@@ -213,6 +252,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(722, 666);
+            this.Controls.Add(this.buttonOptionBox);
             this.Controls.Add(this.foregroundImage);
             this.Controls.Add(this.eventAlertPanel);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -230,10 +270,11 @@
             this.menuStrip1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.eventAlertPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.middleCharacterBoxImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).EndInit();
+            this.buttonOptionBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,6 +297,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label eventOutputLbl;
         private System.Windows.Forms.PictureBox foregroundImage;
+        private System.Windows.Forms.FlowLayoutPanel buttonOptionBox;
+        private System.Windows.Forms.Button multipleChoiceABtn;
+        private System.Windows.Forms.Button multipleChoiceBBtn;
+        private System.Windows.Forms.Button multipleChoiceCBtn;
     }
 }
 
