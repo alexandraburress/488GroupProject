@@ -103,6 +103,16 @@ namespace Test003.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Henry001 {
+            get {
+                object obj = ResourceManager.GetObject("Henry001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap James_Green_Think_full {
             get {
                 object obj = ResourceManager.GetObject("James_Green_Think_full", resourceCulture);
@@ -136,6 +146,16 @@ namespace Test003.Properties {
         internal static System.Drawing.Bitmap PumpkinFarm001 {
             get {
                 object obj = ResourceManager.GetObject("PumpkinFarm001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap School_A {
+            get {
+                object obj = ResourceManager.GetObject("School_A", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

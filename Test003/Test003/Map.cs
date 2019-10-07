@@ -23,10 +23,12 @@ namespace Test003
             Story dressUpMagicSchoolStory = GameData.initilizeStory("MagicSchool.txt",true);
             dressUpMagicSchoolStory.addBackgroundImage(0, Properties.Resources.PumpkinFarm001);
             dressUpMagicSchoolStory.addMiddleCharacterImage(0, Properties.Resources.farmerMother001);
+            dressUpMagicSchoolStory.addMiddleCharacterImage(1,3, Properties.Resources.Henry001);
             dressUpMagicSchoolStory.addBackgroundImage(1, Properties.Resources.TownFestival001);
             
 
             Story henrysFirstSchoolDay = GameData.initilizeStory("HenrysFirstDayOfSchool.txt");
+            henrysFirstSchoolDay.addBackgroundImage(0, Properties.Resources.School_A);
 
 
             Choice choiceGoToGirlsSchool = new Choice("HenrysFirstDayOfSchool.txt", "Go To Girl's School", henrysFirstSchoolDay);

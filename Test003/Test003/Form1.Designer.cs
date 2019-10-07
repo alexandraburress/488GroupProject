@@ -39,22 +39,24 @@
             this.nextBtn = new System.Windows.Forms.Button();
             this.eventAlertPanel = new System.Windows.Forms.Panel();
             this.eventOutputLbl = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.foregroundImage = new System.Windows.Forms.PictureBox();
-            this.middleCharacterBoxImage = new System.Windows.Forms.PictureBox();
-            this.backgroundImage = new System.Windows.Forms.PictureBox();
             this.buttonOptionBox = new System.Windows.Forms.FlowLayoutPanel();
             this.multipleChoiceABtn = new System.Windows.Forms.Button();
             this.multipleChoiceBBtn = new System.Windows.Forms.Button();
             this.multipleChoiceCBtn = new System.Windows.Forms.Button();
+            this.foregroundImage = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.middleCharacterBoxImage = new System.Windows.Forms.PictureBox();
+            this.backgroundImage = new System.Windows.Forms.PictureBox();
+            this.stage = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.eventAlertPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.buttonOptionBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.middleCharacterBoxImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).BeginInit();
-            this.buttonOptionBox.SuspendLayout();
+            this.stage.SuspendLayout();
             this.SuspendLayout();
             // 
             // outputLbl
@@ -161,55 +163,12 @@
             this.eventOutputLbl.Size = new System.Drawing.Size(275, 97);
             this.eventOutputLbl.TabIndex = 2;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(51, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 84);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // foregroundImage
-            // 
-            this.foregroundImage.Image = global::Test003.Properties.Resources.TownFestival001;
-            this.foregroundImage.Location = new System.Drawing.Point(22, 51);
-            this.foregroundImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.foregroundImage.Name = "foregroundImage";
-            this.foregroundImage.Size = new System.Drawing.Size(678, 390);
-            this.foregroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.foregroundImage.TabIndex = 8;
-            this.foregroundImage.TabStop = false;
-            // 
-            // middleCharacterBoxImage
-            // 
-            this.middleCharacterBoxImage.BackColor = System.Drawing.Color.Transparent;
-            this.middleCharacterBoxImage.Image = global::Test003.Properties.Resources.James_Green_Think_full;
-            this.middleCharacterBoxImage.Location = new System.Drawing.Point(178, 51);
-            this.middleCharacterBoxImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.middleCharacterBoxImage.Name = "middleCharacterBoxImage";
-            this.middleCharacterBoxImage.Size = new System.Drawing.Size(376, 390);
-            this.middleCharacterBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.middleCharacterBoxImage.TabIndex = 3;
-            this.middleCharacterBoxImage.TabStop = false;
-            // 
-            // backgroundImage
-            // 
-            this.backgroundImage.Image = global::Test003.Properties.Resources.GlamorLair001;
-            this.backgroundImage.Location = new System.Drawing.Point(22, 51);
-            this.backgroundImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.backgroundImage.Name = "backgroundImage";
-            this.backgroundImage.Size = new System.Drawing.Size(678, 390);
-            this.backgroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.backgroundImage.TabIndex = 2;
-            this.backgroundImage.TabStop = false;
-            // 
             // buttonOptionBox
             // 
             this.buttonOptionBox.Controls.Add(this.multipleChoiceABtn);
             this.buttonOptionBox.Controls.Add(this.multipleChoiceBBtn);
             this.buttonOptionBox.Controls.Add(this.multipleChoiceCBtn);
-            this.buttonOptionBox.Location = new System.Drawing.Point(132, 103);
+            this.buttonOptionBox.Location = new System.Drawing.Point(128, 29);
             this.buttonOptionBox.Name = "buttonOptionBox";
             this.buttonOptionBox.Padding = new System.Windows.Forms.Padding(20, 5, 20, 20);
             this.buttonOptionBox.Size = new System.Drawing.Size(478, 294);
@@ -246,18 +205,73 @@
             this.multipleChoiceCBtn.UseVisualStyleBackColor = true;
             this.multipleChoiceCBtn.Click += new System.EventHandler(this.multipleChoiceCBtn_Click);
             // 
+            // foregroundImage
+            // 
+            this.foregroundImage.BackColor = System.Drawing.Color.Transparent;
+            this.foregroundImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.foregroundImage.Image = global::Test003.Properties.Resources.FarmerFamilyGroupScene;
+            this.foregroundImage.Location = new System.Drawing.Point(0, 0);
+            this.foregroundImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.foregroundImage.Name = "foregroundImage";
+            this.foregroundImage.Size = new System.Drawing.Size(722, 411);
+            this.foregroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.foregroundImage.TabIndex = 8;
+            this.foregroundImage.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(51, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 84);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // middleCharacterBoxImage
+            // 
+            this.middleCharacterBoxImage.BackColor = System.Drawing.Color.Transparent;
+            this.middleCharacterBoxImage.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.middleCharacterBoxImage.Image = global::Test003.Properties.Resources.James_Green_Think_full;
+            this.middleCharacterBoxImage.Location = new System.Drawing.Point(0, 55);
+            this.middleCharacterBoxImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.middleCharacterBoxImage.Name = "middleCharacterBoxImage";
+            this.middleCharacterBoxImage.Size = new System.Drawing.Size(722, 356);
+            this.middleCharacterBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.middleCharacterBoxImage.TabIndex = 3;
+            this.middleCharacterBoxImage.TabStop = false;
+            // 
+            // backgroundImage
+            // 
+            this.backgroundImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.backgroundImage.Image = global::Test003.Properties.Resources.GlamorLair001;
+            this.backgroundImage.Location = new System.Drawing.Point(0, 0);
+            this.backgroundImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.backgroundImage.Name = "backgroundImage";
+            this.backgroundImage.Size = new System.Drawing.Size(722, 411);
+            this.backgroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.backgroundImage.TabIndex = 2;
+            this.backgroundImage.TabStop = false;
+            // 
+            // stage
+            // 
+            this.stage.Controls.Add(this.middleCharacterBoxImage);
+            this.stage.Controls.Add(this.buttonOptionBox);
+            this.stage.Controls.Add(this.backgroundImage);
+            this.stage.Controls.Add(this.foregroundImage);
+            this.stage.Location = new System.Drawing.Point(0, 33);
+            this.stage.Name = "stage";
+            this.stage.Size = new System.Drawing.Size(722, 411);
+            this.stage.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(722, 666);
-            this.Controls.Add(this.buttonOptionBox);
-            this.Controls.Add(this.foregroundImage);
+            this.Controls.Add(this.stage);
             this.Controls.Add(this.eventAlertPanel);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.middleCharacterBoxImage);
-            this.Controls.Add(this.backgroundImage);
             this.Controls.Add(this.outputLbl);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -270,11 +284,12 @@
             this.menuStrip1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.eventAlertPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.buttonOptionBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.middleCharacterBoxImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).EndInit();
-            this.buttonOptionBox.ResumeLayout(false);
+            this.stage.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,6 +316,7 @@
         private System.Windows.Forms.Button multipleChoiceABtn;
         private System.Windows.Forms.Button multipleChoiceBBtn;
         private System.Windows.Forms.Button multipleChoiceCBtn;
+        private System.Windows.Forms.Panel stage;
     }
 }
 
