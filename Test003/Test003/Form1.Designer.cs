@@ -39,21 +39,21 @@
             this.nextBtn = new System.Windows.Forms.Button();
             this.eventAlertPanel = new System.Windows.Forms.Panel();
             this.eventOutputLbl = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonOptionBox = new System.Windows.Forms.FlowLayoutPanel();
             this.multipleChoiceABtn = new System.Windows.Forms.Button();
             this.multipleChoiceBBtn = new System.Windows.Forms.Button();
             this.multipleChoiceCBtn = new System.Windows.Forms.Button();
             this.foregroundImage = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.middleCharacterBoxImage = new System.Windows.Forms.PictureBox();
             this.backgroundImage = new System.Windows.Forms.PictureBox();
             this.stage = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.eventAlertPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.buttonOptionBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.middleCharacterBoxImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).BeginInit();
             this.stage.SuspendLayout();
@@ -163,6 +163,15 @@
             this.eventOutputLbl.Size = new System.Drawing.Size(275, 97);
             this.eventOutputLbl.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(51, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 84);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // buttonOptionBox
             // 
             this.buttonOptionBox.Controls.Add(this.multipleChoiceABtn);
@@ -218,20 +227,11 @@
             this.foregroundImage.TabIndex = 8;
             this.foregroundImage.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(51, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 84);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // middleCharacterBoxImage
             // 
             this.middleCharacterBoxImage.BackColor = System.Drawing.Color.Transparent;
             this.middleCharacterBoxImage.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.middleCharacterBoxImage.Image = global::Test003.Properties.Resources.James_Green_Think_full;
+            this.middleCharacterBoxImage.Image = global::Test003.Properties.Resources.farmerMother001;
             this.middleCharacterBoxImage.Location = new System.Drawing.Point(0, 55);
             this.middleCharacterBoxImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.middleCharacterBoxImage.Name = "middleCharacterBoxImage";
@@ -239,6 +239,7 @@
             this.middleCharacterBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.middleCharacterBoxImage.TabIndex = 3;
             this.middleCharacterBoxImage.TabStop = false;
+            this.middleCharacterBoxImage.Click += new System.EventHandler(this.middleCharacterBoxImage_Click);
             // 
             // backgroundImage
             // 
@@ -284,9 +285,9 @@
             this.menuStrip1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.eventAlertPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.buttonOptionBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.middleCharacterBoxImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).EndInit();
             this.stage.ResumeLayout(false);

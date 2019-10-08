@@ -247,5 +247,10 @@ namespace Test003
 
             }
         }
+
+        private void middleCharacterBoxImage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
