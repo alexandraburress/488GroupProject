@@ -27,10 +27,10 @@ namespace Test003
         //plots from various files
 
         //INport story file
-        private static Story inportStoryFile(string fileName)
+        private static Story inportStoryFile(string fileName, Boolean hasBranchingChoices = false)
         {
             List<string> testText = new List<string>();
-            Story myStory = new Story(testText);
+            Story myStory = new Story(testText, hasBranchingChoices);
 
 
             StreamReader inputFile = File.OpenText(fileName);
@@ -59,6 +59,8 @@ namespace Test003
 
             //resize arrays based on new testText file size
             myStory.updateImageArraySizes();
+
+
             myStory.addMiddleCharacterImage(0, 0, Properties.Resources.James_Green_Think_full);
             myStory.addMiddleCharacterImage(1, 2, Properties.Resources.James_Green_Vashoom_full);
             myStory.addMiddleCharacterImage(3, 3, Properties.Resources.pumpernickel001);
@@ -68,6 +70,16 @@ namespace Test003
 
             Item testItem = new Item("Test Item");
             myStory.findItem(6,testItem);
+
+            return myStory;
+        }
+
+
+        public static Story initilizeStory(string storyFile,Boolean hasBranchingChoices = false)
+        {
+            Story myStory= inportStoryFile(storyFile, hasBranchingChoices);
+            //resize arrays based on new testText file size
+            myStory.updateImageArraySizes();
 
             return myStory;
         }

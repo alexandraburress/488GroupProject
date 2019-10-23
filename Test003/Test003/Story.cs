@@ -14,41 +14,122 @@ namespace Test003
         List<string> text = new List<string>();
         Boolean timingEvents = true;
 
-        public Story(List<string> storyText)
+        public Story(List<string> storyText,Boolean choicesOn=false)
         {
             Position = 0;
             text = storyText;
+            HasChoices = choicesOn;
+
             MiddleCharacterPicture = new Bitmap[storyText.Count];
             BackgroundPicture = new Bitmap[storyText.Count];
-
+            ForegroundPicture = new Bitmap[storyText.Count];
 
         }
 
         public void updateImageArraySizes()
         {
-            MiddleCharacterPicture = new Bitmap[text.Count];
-            BackgroundPicture = new Bitmap[text.Count];
-            StoryOccurances = new Occurance[text.Count];
+            int sum = text.Count;
+            if (HasChoices == true)
+            {
+                sum += 1;
+
+            }
+
+            MiddleCharacterPicture = new Bitmap[sum];
+            BackgroundPicture = new Bitmap[sum];
+            ForegroundPicture = new Bitmap[sum];
+            StoryOccurances = new Occurance[sum];
+            TextEndPosition = sum;
+
+            //Choices Array should be set to 3 locations
+            Choices = new Choice[3];
         }
+
+   
 
         public void addMiddleCharacterImage(int imagePositionStart, int imagePositionEnd, Bitmap image)
         {
-            MiddleCharacterPicture[imagePositionStart] = image;
-            MiddleCharacterPicture[imagePositionEnd] = image;
+            imageArrayVisableLoop(MiddleCharacterPicture, imagePositionStart, imagePositionEnd, image);
+
+            }
+
+        //middle character with default to one frame if not specified
+        public void addMiddleCharacterImage(int imagePosition, Bitmap image)
+        {
+
+
+            addMiddleCharacterImage(imagePosition, imagePosition, image);
 
         }
 
         public void addBackgroundImage(int imagePosition, int imagePositionEnd, Bitmap image)
         {
-            BackgroundPicture[imagePosition] = image;
-            BackgroundPicture[imagePositionEnd] = image;
+            BackgroundPicture=imageArrayVisableLoop(BackgroundPicture, imagePosition, imagePositionEnd, image);
 
         }
+
+
+        //if there is no end position specified, then consider it a one frame image
+        public void addBackgroundImage(int imagePosition, Bitmap image)
+        {
+            addBackgroundImage(imagePosition,imagePosition,image);
+        }
+
+
+        public void addForegroundImage(int imagePosition, int imagePositionEnd, Bitmap image)
+        {
+            //subtract position end from position start and loop though those numbers.
+
+            imageArrayVisableLoop(ForegroundPicture, imagePosition, imagePositionEnd, image);
+
+
+        }
+
+        public void addForegroundImage(int imagePosition, Bitmap image)
+        {
+            addForegroundImage(imagePosition, imagePosition, image);
+        }
+
+        private Bitmap[] imageArrayVisableLoop(Bitmap[] imageArray, int imagePosition, int imagePositionEnd, Bitmap image)
+        {
+            int count = imagePositionEnd - imagePosition;
+            try
+            {
+                for (int i = 0; i <= count; i++)
+                {
+                    imageArray[imagePosition + i] = image;
+                    //ForegroundPictureOn[imagePosition + i] = true;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                string message = "";
+                if (0 > count)
+                {
+                    message = "End Position Lower then Start position\n";
+                }
+                message += ex.Message;
+
+                MessageBox.Show(message);
+
+            }
+
+            return imageArray;
+        }
+
 
 
         public void addOccurance(int storyLocation, Occurance myOccurance)
         {
             StoryOccurances[storyLocation] = myOccurance;
+        }
+
+        public int TextEndPosition
+        {
+            get;
+            set;
         }
 
         public int Position
@@ -64,6 +145,18 @@ namespace Test003
 
         }
 
+        public Bitmap[] ForegroundPicture
+        {
+            get;
+            set;
+        }
+
+        public Boolean[] ForegroundPictureOn
+        {
+            get;
+            set;
+        }
+
         public Bitmap[] BackgroundPicture
         {
             get;
@@ -72,6 +165,19 @@ namespace Test003
         }
 
         public Occurance[] StoryOccurances
+        {
+            get;
+            set;
+
+        }
+
+        public Choice[] Choices
+        {
+            get;
+            set;
+        }
+
+        public Boolean HasChoices
         {
             get;
             set;
@@ -164,6 +270,16 @@ namespace Test003
 
             Occurance output= new Occurance(name, description, image);
             addOccurance(storyLocation,output);
+
+        }
+
+        public void branchStory(Choice choiceA, Choice choiceB=null,Choice choiceC=null)
+        {
+            Choices[0] = choiceA;
+            Choices[1] = choiceB;
+            Choices[2] = choiceC;
+
+            text.Add("Please Select What You Will Do Next");
 
         }
 
