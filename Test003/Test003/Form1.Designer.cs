@@ -44,19 +44,19 @@
             this.multipleChoiceABtn = new System.Windows.Forms.Button();
             this.multipleChoiceBBtn = new System.Windows.Forms.Button();
             this.multipleChoiceCBtn = new System.Windows.Forms.Button();
-            this.foregroundImage = new System.Windows.Forms.PictureBox();
+            this.stage = new System.Windows.Forms.Panel();
             this.middleCharacterBoxImage = new System.Windows.Forms.PictureBox();
             this.backgroundImage = new System.Windows.Forms.PictureBox();
-            this.stage = new System.Windows.Forms.Panel();
+            this.foregroundImage = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.eventAlertPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.buttonOptionBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).BeginInit();
+            this.stage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.middleCharacterBoxImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).BeginInit();
-            this.stage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).BeginInit();
             this.SuspendLayout();
             // 
             // outputLbl
@@ -82,6 +82,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(722, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -214,18 +215,16 @@
             this.multipleChoiceCBtn.UseVisualStyleBackColor = true;
             this.multipleChoiceCBtn.Click += new System.EventHandler(this.multipleChoiceCBtn_Click);
             // 
-            // foregroundImage
+            // stage
             // 
-            this.foregroundImage.BackColor = System.Drawing.Color.Transparent;
-            this.foregroundImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.foregroundImage.Image = global::Test003.Properties.Resources.FarmerFamilyGroupScene;
-            this.foregroundImage.Location = new System.Drawing.Point(0, 0);
-            this.foregroundImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.foregroundImage.Name = "foregroundImage";
-            this.foregroundImage.Size = new System.Drawing.Size(722, 411);
-            this.foregroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.foregroundImage.TabIndex = 8;
-            this.foregroundImage.TabStop = false;
+            this.stage.Controls.Add(this.middleCharacterBoxImage);
+            this.stage.Controls.Add(this.buttonOptionBox);
+            this.stage.Controls.Add(this.backgroundImage);
+            this.stage.Controls.Add(this.foregroundImage);
+            this.stage.Location = new System.Drawing.Point(0, 33);
+            this.stage.Name = "stage";
+            this.stage.Size = new System.Drawing.Size(722, 411);
+            this.stage.TabIndex = 10;
             // 
             // middleCharacterBoxImage
             // 
@@ -244,7 +243,7 @@
             // backgroundImage
             // 
             this.backgroundImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.backgroundImage.Image = global::Test003.Properties.Resources.GlamorLair001;
+            this.backgroundImage.Image = global::Test003.Properties.Resources.PumpkinFarm001;
             this.backgroundImage.Location = new System.Drawing.Point(0, 0);
             this.backgroundImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.backgroundImage.Name = "backgroundImage";
@@ -252,17 +251,20 @@
             this.backgroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.backgroundImage.TabIndex = 2;
             this.backgroundImage.TabStop = false;
+            this.backgroundImage.Click += new System.EventHandler(this.backgroundImage_Click);
             // 
-            // stage
+            // foregroundImage
             // 
-            this.stage.Controls.Add(this.middleCharacterBoxImage);
-            this.stage.Controls.Add(this.buttonOptionBox);
-            this.stage.Controls.Add(this.backgroundImage);
-            this.stage.Controls.Add(this.foregroundImage);
-            this.stage.Location = new System.Drawing.Point(0, 33);
-            this.stage.Name = "stage";
-            this.stage.Size = new System.Drawing.Size(722, 411);
-            this.stage.TabIndex = 10;
+            this.foregroundImage.BackColor = System.Drawing.Color.Transparent;
+            this.foregroundImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.foregroundImage.Image = global::Test003.Properties.Resources.FarmerFamilyGroupScene;
+            this.foregroundImage.Location = new System.Drawing.Point(0, 0);
+            this.foregroundImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.foregroundImage.Name = "foregroundImage";
+            this.foregroundImage.Size = new System.Drawing.Size(722, 411);
+            this.foregroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.foregroundImage.TabIndex = 8;
+            this.foregroundImage.TabStop = false;
             // 
             // Form1
             // 
@@ -287,10 +289,10 @@
             this.eventAlertPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.buttonOptionBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).EndInit();
+            this.stage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.middleCharacterBoxImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).EndInit();
-            this.stage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

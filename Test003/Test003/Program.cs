@@ -16,7 +16,7 @@ namespace Test003
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Map());
+            Application.Run(new StartPage());
         }
     }
 }

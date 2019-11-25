@@ -184,6 +184,12 @@ namespace Test003
 
         }
 
+        public Minigame[] Minigames
+        {
+            get;
+
+        }
+
         public string start()
         {
             Position = 0;
@@ -196,6 +202,8 @@ namespace Test003
             return output;
         }
 
+        //Progresses to the next part of text, 
+        //checks for minigames, and other tasks
         public string next()
         {
             int maxPosition = text.Count - 1;
@@ -208,6 +216,15 @@ namespace Test003
                 Position = 0;
 
             }
+            //if there is a minigame loaded here that hasn't been run, play that now
+            else if (Minigames[Position]!=null && Minigames[Position].HasBeenPlayed==false)
+            {
+                Minigames[Position].start();
+
+
+            }
+
+
             //If at max position in array, stay there
             else if (Position >= maxPosition)
             {
@@ -280,6 +297,14 @@ namespace Test003
             Choices[2] = choiceC;
 
             text.Add("Please Select What You Will Do Next");
+
+        }
+
+        //add a mini game after this position in the text
+        public void addMinigame(int position)
+        {
+            Minigame minigame = new Minigame();
+
 
         }
 

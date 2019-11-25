@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{27266E88-429E-45F8-9348-2990B04DFE9C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>Test003</RootNamespace>
     <AssemblyName>Test003</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -81,6 +81,7 @@
     <Compile Include="Map.Designer.cs">
       <DependentUpon>Map.cs</DependentUpon>
     </Compile>
+    <Compile Include="Minigame.cs" />
     <Compile Include="Occurance.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -176,6 +177,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\test_shitA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Henry004.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Henry004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shirt_magicGirlTop001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shirt_wavy_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pants_skirt_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forground_arm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\face_anime_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\face_derp_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\face_realistic_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hair_brown_bun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hair_curly_purple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hair_pixie_blond.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

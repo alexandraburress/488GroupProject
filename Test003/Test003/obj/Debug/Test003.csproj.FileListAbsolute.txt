@@ -21,3 +21,13 @@ C:\Users\jepko\OneDrive\Documents\GitHub\488GroupProject\Test003\Test003\obj\Deb
 C:\Users\jepko\OneDrive\Documents\GitHub\488GroupProject\Test003\Test003\obj\Debug\Test003.exe
 C:\Users\jepko\OneDrive\Documents\GitHub\488GroupProject\Test003\Test003\obj\Debug\Test003.pdb
 C:\Users\Owner\Documents\GitHub\488GroupProject\Test003\Test003\bin\Debug\Test003.exe
+C:\Users\Owner\Documents\GitHub\488GroupProject\Test003\Test003\bin\Debug\Test003.exe.config
+C:\Users\Owner\Documents\GitHub\488GroupProject\Test003\Test003\bin\Debug\Test003.pdb
+C:\Users\Owner\Documents\GitHub\488GroupProject\Test003\Test003\obj\Debug\Test003.Form1.resources
+C:\Users\Owner\Documents\GitHub\488GroupProject\Test003\Test003\obj\Debug\Test003.Map.resources
+C:\Users\Owner\Documents\GitHub\488GroupProject\Test003\Test003\obj\Debug\Test003.Properties.Resources.resources
+C:\Users\Owner\Documents\GitHub\488GroupProject\Test003\Test003\obj\Debug\Test003.StartPage.resources
+C:\Users\Owner\Documents\GitHub\488GroupProject\Test003\Test003\obj\Debug\Test003.csproj.GenerateResource.cache
+C:\Users\Owner\Documents\GitHub\488GroupProject\Test003\Test003\obj\Debug\Test003.exe
+C:\Users\Owner\Documents\GitHub\488GroupProject\Test003\Test003\obj\Debug\Test003.pdb
+C:\Users\Owner\Documents\GitHub\488GroupProject\Test003\Test003\obj\Debug\Test003.csprojAssemblyReference.cache
