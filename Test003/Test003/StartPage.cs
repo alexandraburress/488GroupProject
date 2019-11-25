@@ -28,6 +28,7 @@ namespace Test003
             dressUpMagicSchoolStory.addMiddleCharacterImage(1, 3,henry.DressedHero);
             dressUpMagicSchoolStory.addBackgroundImage(1, Properties.Resources.TownFestival001);
 
+            //add minigame 
             dressUpMagicSchoolStory.addMinigame(2);
 
 

@@ -35,6 +35,7 @@ namespace Test003
 
             }
 
+            Minigames = new Minigame[sum];
             MiddleCharacterPicture = new Bitmap[sum];
             BackgroundPicture = new Bitmap[sum];
             ForegroundPicture = new Bitmap[sum];
@@ -187,6 +188,7 @@ namespace Test003
         public Minigame[] Minigames
         {
             get;
+            set;
 
         }
 
@@ -221,6 +223,14 @@ namespace Test003
             {
                 Minigames[Position].start();
 
+                if (Minigames[Position].Won == false)
+                {
+                    return "You are an instant loser";
+                }
+                else
+                {
+                    return "You are a winner";
+                }
 
             }
 
@@ -303,9 +313,9 @@ namespace Test003
         //add a mini game after this position in the text
         public void addMinigame(int position)
         {
-            Minigame minigame = new Minigame();
+            Minigame minigame = new Minigame(MINIGAME_GAMES.DRESSUP_CONTEST);
 
-
+            Minigames[position] = minigame;
         }
 
 

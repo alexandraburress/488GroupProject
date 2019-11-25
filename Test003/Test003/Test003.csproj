@@ -66,6 +66,12 @@
   <ItemGroup>
     <Compile Include="Choice.cs" />
     <Compile Include="Clothing.cs" />
+    <Compile Include="DressUpContest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DressUpContest.Designer.cs">
+      <DependentUpon>DressUpContest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

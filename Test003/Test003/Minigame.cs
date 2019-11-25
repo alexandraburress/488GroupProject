@@ -6,18 +6,33 @@ using System.Threading.Tasks;
 
 namespace Test003
 {
+    public enum MINIGAME_GAMES
+    {
+        DRESSUP_CONTEST
+
+    }
+
     public class Minigame
     {
-        public Minigame()
+
+
+
+        public Minigame(MINIGAME_GAMES minigameType)
         {
             HasBeenPlayed = false;
+            TypeOfGame = minigameType;
         }
 
         //return true if minigame is won, and false if it is lost
         public Boolean start()
         {
 
-            
+            if (TypeOfGame == MINIGAME_GAMES.DRESSUP_CONTEST) {
+                DressUpContest newContest = new DressUpContest();
+
+                newContest.ShowDialog();
+
+            }
             //for now default to true
             return true;
         }
@@ -26,6 +41,19 @@ namespace Test003
         {
             get;
             set;
+
+        }
+
+        public Boolean Won
+        {
+            get;
+            set;
+
+        }
+
+        public MINIGAME_GAMES TypeOfGame
+        {
+            get;
 
         }
 
