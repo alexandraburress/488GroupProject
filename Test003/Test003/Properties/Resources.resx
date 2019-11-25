@@ -118,46 +118,79 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="School_A" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\School_A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="face_realistic_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\face_realistic_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Henry001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Henry001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FarmerFamilyGroupScene" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FarmerFamilyGroupScene.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GlamorLair001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GlamorLair001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DefaultOutdoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DefaultOutdoor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Henry004" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Henry004.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="James_Green_Vashoom_full" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\James_Green_Vashoom_full.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PumpkinFarm001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PumpkinFarm001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ShieldsKitchen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ShieldsKitchen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pumpernickel001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pumpernickel001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="farmerMother001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\farmerMother001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="shirt_magicGirlTop001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shirt_magicGirlTop001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="James_Green_Think_full" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\James_Green_Think_full.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="School_A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\School_A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pants_skirt_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pants_skirt_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="farmerMother001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\farmerMother001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="face_anime_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\face_anime_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GlamorLair001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GlamorLair001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="TownFestival001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TownFestival001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ShieldsKitchen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ShieldsKitchen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="face_derp_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\face_derp_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PumpkinFarm001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PumpkinFarm001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultOutdoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultOutdoor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="test_shitA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\test_shitA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="test_pantsA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\test_pantsA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="test_shitA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\test_shitA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="forground_arm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forground_arm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shirt_wavy_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shirt_wavy_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FarmerFamilyGroupScene" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FarmerFamilyGroupScene.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pumpernickel001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pumpernickel001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hair_brown_bun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hair_brown_bun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hair_curly_purple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hair_curly_purple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hair_pixie_blond" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hair_pixie_blond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

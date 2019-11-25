@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.mapPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.dressUpPanel = new System.Windows.Forms.Panel();
             this.dressUpGameButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,18 +41,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mapPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.dressUpPanel.SuspendLayout();
             this.aUniversityPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mapPanel
             // 
+            this.mapPanel.Controls.Add(this.pictureBox1);
             this.mapPanel.Controls.Add(this.panel2);
             this.mapPanel.Controls.Add(this.dressUpPanel);
             this.mapPanel.Controls.Add(this.aUniversityPanel);
@@ -60,6 +63,38 @@
             this.mapPanel.Size = new System.Drawing.Size(660, 471);
             this.mapPanel.TabIndex = 0;
             this.mapPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mapPanel_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(4, 131);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(204, 123);
+            this.panel2.TabIndex = 4;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(37, 55);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(143, 28);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Enter";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(52, 15);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 17);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Selection Test";
             // 
             // dressUpPanel
             // 
@@ -159,37 +194,14 @@
             this.label1.Text = "Glamor Lair";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // panel2
+            // pictureBox1
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(4, 131);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(204, 123);
-            this.panel2.TabIndex = 4;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(37, 55);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(143, 28);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Enter";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(52, 15);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 17);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Selection Test";
+            this.pictureBox1.Image = global::Test003.Properties.Resources.hair_pixie_blond;
+            this.pictureBox1.Location = new System.Drawing.Point(309, 252);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // Map
             // 
@@ -202,14 +214,15 @@
             this.Text = "Map";
             this.Load += new System.EventHandler(this.Map_Load);
             this.mapPanel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.dressUpPanel.ResumeLayout(false);
             this.dressUpPanel.PerformLayout();
             this.aUniversityPanel.ResumeLayout(false);
             this.aUniversityPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -229,5 +242,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

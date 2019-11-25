@@ -35,6 +35,7 @@ namespace Test003
 
             }
 
+            Minigames = new Minigame[sum];
             MiddleCharacterPicture = new Bitmap[sum];
             BackgroundPicture = new Bitmap[sum];
             ForegroundPicture = new Bitmap[sum];
@@ -184,6 +185,13 @@ namespace Test003
 
         }
 
+        public Minigame[] Minigames
+        {
+            get;
+            set;
+
+        }
+
         public string start()
         {
             Position = 0;
@@ -196,6 +204,8 @@ namespace Test003
             return output;
         }
 
+        //Progresses to the next part of text, 
+        //checks for minigames, and other tasks
         public string next()
         {
             int maxPosition = text.Count - 1;
@@ -208,6 +218,23 @@ namespace Test003
                 Position = 0;
 
             }
+            //if there is a minigame loaded here that hasn't been run, play that now
+            else if (Minigames[Position]!=null && Minigames[Position].HasBeenPlayed==false)
+            {
+                Minigames[Position].start();
+
+                if (Minigames[Position].Won == false)
+                {
+                    return "You are an instant loser";
+                }
+                else
+                {
+                    return "You are a winner";
+                }
+
+            }
+
+
             //If at max position in array, stay there
             else if (Position >= maxPosition)
             {
@@ -281,6 +308,14 @@ namespace Test003
 
             text.Add("Please Select What You Will Do Next");
 
+        }
+
+        //add a mini game after this position in the text
+        public void addMinigame(int position)
+        {
+            Minigame minigame = new Minigame(MINIGAME_GAMES.DRESSUP_CONTEST);
+
+            Minigames[position] = minigame;
         }
 
 
