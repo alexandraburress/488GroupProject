@@ -8,9 +8,9 @@ namespace Test003
 {
     public class Choice
     {
-        public Choice(string filename, string buttonText="", Story thisStory=null)
+        public Choice(string buttonText, Story thisStory)
         {
-            Filename = filename;
+
             ButtonText = buttonText;
             Story = thisStory;
         }

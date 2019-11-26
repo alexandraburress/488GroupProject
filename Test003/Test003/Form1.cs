@@ -45,6 +45,12 @@ namespace Test003
             backgroundImage.Controls.Add(middleCharacterBoxImage);
             middleCharacterBoxImage.BackColor = Color.Transparent;
 
+
+            Graphics graphics = Graphics.FromImage(Properties.Resources.PumpkinFarm001);
+            ControlPaint.DrawBorder(graphics, buttonOptionBox.ClientRectangle,Color.Green,ButtonBorderStyle.Solid);
+            //Add details to the button box;
+            buttonOptionBox.BackColor = Color.MintCream;
+
             //if I've changed position 0 I need to reload anyway
             checkForImageChange();
 
@@ -78,7 +84,9 @@ namespace Test003
             {
                 outputLbl.Text = myStory.next();
             }
+            
 
+            //This has become the method to check for all changes
             checkForImageChange();
         }
 
@@ -98,6 +106,7 @@ namespace Test003
             checkForImageChange();
         }
 
+        //checks for story changes. This includes but is not limited to images.
         private void checkForImageChange()
         {
             int num = myStory.Position;
@@ -228,7 +237,6 @@ namespace Test003
             {
                 //set next story
                 Story myNextStory = myStory.Choices[arrayPosition].Story;
-                MessageBox.Show(myStory.Choices[arrayPosition].Filename);
 
                 //if I've changed position 0 I need to reload anyway
                 
@@ -238,6 +246,8 @@ namespace Test003
 
 
                 outputLbl.Text = myStory.start();
+
+                //turn button box invisable
                 buttonOptionBox.Visible = false;
             }
             else
