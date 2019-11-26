@@ -31,3 +31,4 @@ C:\Users\Owner\Documents\GitHub\488GroupProject\Test003\Test003\obj\Debug\Test00
 C:\Users\Owner\Documents\GitHub\488GroupProject\Test003\Test003\obj\Debug\Test003.exe
 C:\Users\Owner\Documents\GitHub\488GroupProject\Test003\Test003\obj\Debug\Test003.pdb
 C:\Users\Owner\Documents\GitHub\488GroupProject\Test003\Test003\obj\Debug\Test003.csprojAssemblyReference.cache
+C:\Users\Owner\Documents\GitHub\488GroupProject\Test003\Test003\obj\Debug\Test003.DressUpContest.resources

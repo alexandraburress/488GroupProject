@@ -13,7 +13,7 @@ namespace Test003
         {
             InitializeComponent();
 
-            
+            /*
             Story dressUpMagicSchoolStory = GameData.initilizeStory("MagicSchool.txt",true);
             dressUpMagicSchoolStory.addBackgroundImage(0, Properties.Resources.PumpkinFarm001);
             dressUpMagicSchoolStory.addMiddleCharacterImage(0, Properties.Resources.farmerMother001);
@@ -25,12 +25,12 @@ namespace Test003
             henrysFirstSchoolDay.addBackgroundImage(0, Properties.Resources.School_A);
 
 
-            Choice choiceGoToGirlsSchool = new Choice("HenrysFirstDayOfSchool.txt", "Go To Girl's School", henrysFirstSchoolDay);
+            Choice choiceGoToGirlsSchool = new Choice( "Go To Girl's School", henrysFirstSchoolDay);
             dressUpMagicSchoolStory.branchStory(choiceGoToGirlsSchool);
 
             magicSchoolStories.Add(dressUpMagicSchoolStory);
             magicSchoolStories.Add(henrysFirstSchoolDay);
-
+            */
 
         }
 

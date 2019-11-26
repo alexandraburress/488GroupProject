@@ -98,6 +98,9 @@
       <DependentUpon>StartPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Story.cs" />
+    <EmbeddedResource Include="DressUpContest.resx">
+      <DependentUpon>DressUpContest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +222,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hair_pixie_blond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoelRedSmile.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoelRedThink.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoelRedWorried.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Klair001.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
