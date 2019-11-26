@@ -335,6 +335,7 @@ namespace Test003
             Minigame minigame = new Minigame(MINIGAME_GAMES.DRESSUP_CONTEST, CurrentHero);
 
             Minigames[position] = minigame;
+            CurrentHero.DressedHero = CurrentHero.dressHero();
         }
 
 

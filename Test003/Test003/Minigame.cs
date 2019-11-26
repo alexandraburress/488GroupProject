@@ -32,7 +32,7 @@ namespace Test003
                 DressUpContest newContest = new DressUpContest(this);
 
                 newContest.ShowDialog();
-
+                CurrentHero.DressedHero = CurrentHero.dressHero();
             }
 
         }

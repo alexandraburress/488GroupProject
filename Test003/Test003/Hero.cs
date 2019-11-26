@@ -8,23 +8,34 @@ using System.Windows.Forms;
 
 namespace Test003
 {
-
+    public enum SEX
+    {
+        MALE,
+        FAMALE
+    }
     
     public class Hero
     {
 
 
-        public Hero()
+        public Hero(String name="Henry",string nickname="Henrietta",SEX sex=SEX.MALE)
         {
-            Name = "Henry";
-            Nickname = "Henrietta";
+            Name = name;
+            Nickname = nickname;
+            Sex = sex;
             //Will be using TYPESOFCLOTHING enum in multiple locations
             int clothingTypeSize = (int)Enum.GetNames(typeof(TYPESOFCLOTHING)).Length;
-            int maxClothingItemNumber = 20;
 
             //initlizie wardrobe array with first position being size of TYPESOF CLOTHING ENUM
             //setting second  number as maximum number of clothing pieces in here
-            Wardrobe = new Clothing[clothingTypeSize, maxClothingItemNumber];
+            Wardrobe = new Clothing[clothingTypeSize][];
+            Wardrobe[(int)TYPESOFCLOTHING.SHIRT] = new Clothing[(int)Enum.GetNames(typeof(SHIRTSENUM)).Length];
+            Wardrobe[(int)TYPESOFCLOTHING.PANTS] = new Clothing[(int)Enum.GetNames(typeof(PANTSENUM)).Length];
+            Wardrobe[(int)TYPESOFCLOTHING.FACE] = new Clothing[(int)Enum.GetNames(typeof(FACES_ENUM)).Length];
+            Wardrobe[(int)TYPESOFCLOTHING.HAIR] = new Clothing[(int)Enum.GetNames(typeof(HAIR_ENUM)).Length];
+
+
+
             Body = Properties.Resources.Henry004;
 
             //Will access the positions in this array bassed on DistinctClothing Pieces ENUM
@@ -37,39 +48,39 @@ namespace Test003
 
             int outfitTypeNum = (int)TYPESOFCLOTHING.SHIRT;
             int subNum = (int)SHIRTSENUM.WEAVY_BLUE;
-            Clothing workingItem = Clothing.Shirts[subNum];
+            
 
-            starterOutfit(outfitTypeNum, subNum, workingItem);
+            starterOutfit(outfitTypeNum, subNum);
 
 
             outfitTypeNum = (int)TYPESOFCLOTHING.PANTS;
             subNum = (int)PANTSENUM.SKIRT_BLUE;
-            workingItem = Clothing.Pants[subNum];
 
-            starterOutfit(outfitTypeNum, subNum, workingItem);
+            starterOutfit(outfitTypeNum, subNum);
 
 
             outfitTypeNum = (int)TYPESOFCLOTHING.FACE;
             subNum = (int)FACES_ENUM.DERP;
-            workingItem = Clothing.Faces[subNum];
 
-            starterOutfit(outfitTypeNum, subNum, workingItem);
+            starterOutfit(outfitTypeNum, subNum);
 
             outfitTypeNum = (int)TYPESOFCLOTHING.HAIR;
             subNum = (int)HAIR_ENUM.CURLY_PURPLE;
-            workingItem = Clothing.Hair[subNum];
 
-            starterOutfit(outfitTypeNum, subNum, workingItem);
+            starterOutfit(outfitTypeNum, subNum);
 
 
             DressedHero = dressHero();
 
+            //add a few other pieces to give player some choice in game
+            addToWardrobe((int)TYPESOFCLOTHING.SHIRT,(int)SHIRTSENUM.MAGIC_BLACK);
+
         }
 
-        private void starterOutfit(int outfitTypeNum, int subNum, Clothing workingItem)
+        private void starterOutfit(int outfitTypeNum, int subNum)
         {
-            Outfit[outfitTypeNum] = workingItem;
-            addToWardrobe(outfitTypeNum, subNum, workingItem);
+            Outfit[outfitTypeNum] = Clothing.Wardrobe[outfitTypeNum][subNum];
+            addToWardrobe(outfitTypeNum, subNum);
 
 
         }
@@ -102,22 +113,51 @@ namespace Test003
         public Bitmap DressedHero
         {
             get;
-
+            set;
             }
 
         //wardrobe is to keep track of clothing that henry owns. It should return null
         //where Henry dosen't have that clothing piece yet
-        public Clothing[,] Wardrobe
+        public Clothing[][] Wardrobe
         {
             get;
 
         }
 
-        public void addToWardrobe(int clothingTypeEnum,int clothingItemEnum,Clothing addClothing)
+        public Clothing[] Shirts
+        {
+            get { return Wardrobe[(int)TYPESOFCLOTHING.SHIRT]; }
+        }
+
+        public Clothing[] Pants
+        {
+            get { return Wardrobe[(int)TYPESOFCLOTHING.PANTS]; }
+        }
+
+        //I plan to include checks for a lack of shirt in the dress up minigame. If the character
+        //is male he fails his goal to cross dress to attend school then automatically loses
+        public SEX Sex
+        {
+            get;
+        }
+
+        public void addToWardrobe(int clothingTypeEnum,int clothingItemEnum)
         {
 
+            //pull static refrenece to all items from Clothing
+            Clothing workingItem = Clothing.Wardrobe[clothingTypeEnum][clothingItemEnum];
 
-            Wardrobe[clothingTypeEnum, clothingItemEnum] =addClothing;
+            //assign it to the hero's personal wardrobe.
+            //if it isn't in there at all, add it.
+            if (Wardrobe[clothingTypeEnum][clothingItemEnum]==null)
+            {
+
+                Wardrobe[clothingTypeEnum][clothingItemEnum] = workingItem;
+
+            }
+            //Then increase the number availiable. Future updates may allow selling of extras, or combining
+
+            Wardrobe[clothingTypeEnum][clothingItemEnum].Number++;
 
 
         }
@@ -156,7 +196,14 @@ namespace Test003
             return output;
         }
         
-        
+        public void changeShirt(Clothing clothing)
+        {
+            
+            Outfit[(int)TYPESOFCLOTHING.SHIRT] = clothing;
+            DressedHero=dressHero();
+
+
+        }
 
     }
 }

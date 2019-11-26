@@ -46,10 +46,13 @@ namespace Test003
     {
 
         
-        public Clothing(string name, Bitmap image)
+        public Clothing(string name, Bitmap image,int score=0)
         {
             Name = name;
             Image = image;
+
+
+
 
         }
 
@@ -77,24 +80,43 @@ namespace Test003
 
         public static Clothing[] Faces
         {
-            get { return initilizeFaces(); }
+            get { return Wardrobe[(int)TYPESOFCLOTHING.FACE]; }
         }
 
         public static Clothing[] Shirts
         {
-            get { return initilizeShirts(); }
+            get { return Wardrobe[(int)TYPESOFCLOTHING.SHIRT]; }
 
         }
 
         public static Clothing[] Pants
         {
-            get { return initilizePants(); }
+            get { return Wardrobe[(int)TYPESOFCLOTHING.PANTS]; }
 
         }
         public static Clothing[] Hair
         {
-            get { return initilizeHair(); }
+            get { return Wardrobe[(int)TYPESOFCLOTHING.HAIR]; }
 
+        }
+
+        public static Clothing[][] Wardrobe
+        {
+            get {
+
+                //Will be using TYPESOFCLOTHING enum in multiple locations
+                int clothingTypeSize = (int)Enum.GetNames(typeof(TYPESOFCLOTHING)).Length;
+
+                //initlizie wardrobe array with first position being size of TYPESOF CLOTHING ENUM
+                //setting second  number as maximum number of clothing pieces in here
+                Clothing[][]Wardrobe = new Clothing[clothingTypeSize][];
+                Wardrobe[(int)TYPESOFCLOTHING.SHIRT] = initilizeShirts();
+                Wardrobe[(int)TYPESOFCLOTHING.PANTS] = initilizePants();
+                Wardrobe[(int)TYPESOFCLOTHING.FACE] = initilizeFaces();
+                Wardrobe[(int)TYPESOFCLOTHING.HAIR] = initilizeHair();
+
+                return Wardrobe;
+            }
         }
 
         //intilizing the items in the clothing arrays
