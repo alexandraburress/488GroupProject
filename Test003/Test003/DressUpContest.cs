@@ -12,9 +12,24 @@ namespace Test003
 {
     public partial class DressUpContest : Form
     {
-        public DressUpContest()
+        Minigame minigame;
+
+        public DressUpContest(Minigame minigame)
         {
             InitializeComponent();
+            this.minigame = minigame;
+        }
+
+        private void btnWin_Click(object sender, EventArgs e)
+        {
+            minigame.Won = true;
+            this.Close();
+        }
+
+        private void btnLose_Click(object sender, EventArgs e)
+        {
+            minigame.Won = false;
+            this.Close();
         }
     }
 }

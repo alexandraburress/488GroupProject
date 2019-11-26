@@ -15,36 +15,31 @@ namespace Test003
     public class Minigame
     {
 
-
-
-        public Minigame(MINIGAME_GAMES minigameType)
+        
+        public Minigame(MINIGAME_GAMES minigameType, Hero hero, string loserMessage = "You have lost. Please try again")
         {
-            HasBeenPlayed = false;
             TypeOfGame = minigameType;
+            LoserMessage = loserMessage;
+            CurrentHero = hero;
         }
 
         //return true if minigame is won, and false if it is lost
-        public Boolean start()
+        public void start()
         {
 
+
             if (TypeOfGame == MINIGAME_GAMES.DRESSUP_CONTEST) {
-                DressUpContest newContest = new DressUpContest();
+                DressUpContest newContest = new DressUpContest(this);
 
                 newContest.ShowDialog();
 
             }
-            //for now default to true
-            return true;
-        }
-
-        public Boolean HasBeenPlayed
-        {
-            get;
-            set;
 
         }
 
-        public Boolean Won
+       
+
+        public bool Won
         {
             get;
             set;
@@ -57,6 +52,17 @@ namespace Test003
 
         }
 
+        public string LoserMessage
+        {
+            get;
+            set;
+        }
+
+        public Hero CurrentHero
+        {
+            get;
+            set;
+        }
 
 
 

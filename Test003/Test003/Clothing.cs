@@ -66,6 +66,12 @@ namespace Test003
 
         }
 
+        public int Number
+        {
+            get;
+            set;
+        }
+
 
         //holding an array backed by an enum for each clothing item
 

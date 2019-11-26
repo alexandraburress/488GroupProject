@@ -14,11 +14,12 @@ namespace Test003
         List<string> text = new List<string>();
         Boolean timingEvents = true;
 
-        public Story(List<string> storyText,Boolean choicesOn=false)
+        public Story(List<string> storyText, Hero currentHero, Boolean choicesOn=false)
         {
             Position = 0;
             text = storyText;
             HasChoices = choicesOn;
+            CurrentHero = currentHero;
 
             MiddleCharacterPicture = new Bitmap[storyText.Count];
             BackgroundPicture = new Bitmap[storyText.Count];
@@ -192,6 +193,19 @@ namespace Test003
 
         }
 
+        public string StoryFile
+        {
+            get;
+            set;
+        }
+
+        public Hero CurrentHero
+        {
+            get;
+            set;
+        }
+
+
         public string start()
         {
             Position = 0;
@@ -210,6 +224,7 @@ namespace Test003
         {
             int maxPosition = text.Count - 1;
             string output = "";
+            Minigame thisMinigame = Minigames[Position];
 
             //only advance to next position in List if it exists
             //in case array is empty, output messages and set position to 0 for later code
@@ -218,17 +233,21 @@ namespace Test003
                 Position = 0;
 
             }
-            //if there is a minigame loaded here that hasn't been run, play that now
-            else if (Minigames[Position]!=null && Minigames[Position].HasBeenPlayed==false)
-            {
-                Minigames[Position].start();
 
-                if (Minigames[Position].Won == false)
+            //if there is a minigame loaded here that hasn't been run, play that now
+            else if (thisMinigame != null && thisMinigame.Won==false)
+            {
+                //the outcome of the minigame will update the Won paramater.
+                thisMinigame.start();
+
+                if (thisMinigame.Won == false)
                 {
-                    return "You are an instant loser";
+                    //Print a message to the player they lost. Do not allow text to continue
+                    return thisMinigame.LoserMessage;
                 }
                 else
                 {
+                    //Print a message to let show the player they won. Continue with game
                     return "You are a winner";
                 }
 
@@ -313,7 +332,7 @@ namespace Test003
         //add a mini game after this position in the text
         public void addMinigame(int position)
         {
-            Minigame minigame = new Minigame(MINIGAME_GAMES.DRESSUP_CONTEST);
+            Minigame minigame = new Minigame(MINIGAME_GAMES.DRESSUP_CONTEST, CurrentHero);
 
             Minigames[position] = minigame;
         }

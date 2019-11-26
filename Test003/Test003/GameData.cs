@@ -19,18 +19,19 @@ namespace Test003
 
         }
 
-        public Panel EventPanel{
+        public Panel EventPanel {
             get;
             set;
         }
 
+
         //plots from various files
 
         //INport story file
-        private static Story inportStoryFile(string fileName, Boolean hasBranchingChoices = false)
+        private static Story inportStoryFile(string fileName, Hero hero, Boolean hasBranchingChoices = false)
         {
             List<string> testText = new List<string>();
-            Story myStory = new Story(testText, hasBranchingChoices);
+            Story myStory = new Story(testText,hero , hasBranchingChoices);
 
 
             StreamReader inputFile = File.OpenText(fileName);
@@ -50,9 +51,9 @@ namespace Test003
         //Glamor hobo plot
         public static Story initilizeGlamorHobosAdventure()
         {
-
+            Hero glamorHobo = new Hero();
             Story myStory;
-            myStory=inportStoryFile("Story.txt");
+            myStory=inportStoryFile("Story.txt",glamorHobo);
 
 
             
@@ -75,11 +76,15 @@ namespace Test003
         }
 
 
-        public static Story initilizeStory(string storyFile,Boolean hasBranchingChoices = false)
+        public static Story initilizeStory(string storyFile,Hero hero, Boolean hasBranchingChoices = false)
         {
-            Story myStory= inportStoryFile(storyFile, hasBranchingChoices);
+            Story myStory= inportStoryFile(storyFile,hero, hasBranchingChoices);
             //resize arrays based on new testText file size
             myStory.updateImageArraySizes();
+
+            //add storyfile for future pulls
+            myStory.StoryFile = storyFile;
+
 
             return myStory;
         }
