@@ -143,6 +143,26 @@ namespace Test003.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap glasses_gold_and_red {
+            get {
+                object obj = ResourceManager.GetObject("glasses_gold_and_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap glasses_sun_black {
+            get {
+                object obj = ResourceManager.GetObject("glasses_sun_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hair_brown_bun {
             get {
                 object obj = ResourceManager.GetObject("hair_brown_bun", resourceCulture);
@@ -223,6 +243,16 @@ namespace Test003.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mushrooms001 {
+            get {
+                object obj = ResourceManager.GetObject("mushrooms001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap NoelRedSmile {
             get {
                 object obj = ResourceManager.GetObject("NoelRedSmile", resourceCulture);
@@ -246,6 +276,16 @@ namespace Test003.Properties {
         internal static System.Drawing.Bitmap NoelRedWorried {
             get {
                 object obj = ResourceManager.GetObject("NoelRedWorried", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pants_jeans_blue {
+            get {
+                object obj = ResourceManager.GetObject("pants_jeans_blue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +346,16 @@ namespace Test003.Properties {
         internal static System.Drawing.Bitmap shirt_magicGirlTop001 {
             get {
                 object obj = ResourceManager.GetObject("shirt_magicGirlTop001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shirt_tShirt_red {
+            get {
+                object obj = ResourceManager.GetObject("shirt_tShirt_red", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

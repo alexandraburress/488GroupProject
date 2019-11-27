@@ -90,6 +90,9 @@ namespace Test003
             checkForImageChange();
         }
 
+
+
+
         private void prevButton_Click(object sender, EventArgs e)
         {
             if (eventBoxActive == false)
@@ -154,6 +157,7 @@ namespace Test003
             }
             else if (currentOccurence != null && currentOccurence.Occured==false)
             {
+                eventAlertPanel.BringToFront();
                 eventOutputLbl.Text = currentOccurence.Name + "\n" + currentOccurence.Description;
                 occuranceSwitch(true);
                 currentOccurence.Occured = true;
@@ -271,6 +275,12 @@ namespace Test003
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void eventAlertPanel_Click(object sender, EventArgs e)
+        {
+                next();
+         
         }
     }
 }

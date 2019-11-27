@@ -39,7 +39,6 @@
             this.nextBtn = new System.Windows.Forms.Button();
             this.eventAlertPanel = new System.Windows.Forms.Panel();
             this.eventOutputLbl = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonOptionBox = new System.Windows.Forms.FlowLayoutPanel();
             this.multipleChoiceABtn = new System.Windows.Forms.Button();
             this.multipleChoiceBBtn = new System.Windows.Forms.Button();
@@ -48,15 +47,16 @@
             this.middleCharacterBoxImage = new System.Windows.Forms.PictureBox();
             this.backgroundImage = new System.Windows.Forms.PictureBox();
             this.foregroundImage = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.eventAlertPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.buttonOptionBox.SuspendLayout();
             this.stage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.middleCharacterBoxImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // outputLbl
@@ -155,6 +155,7 @@
             this.eventAlertPanel.Size = new System.Drawing.Size(277, 223);
             this.eventAlertPanel.TabIndex = 7;
             this.eventAlertPanel.Visible = false;
+            this.eventAlertPanel.Click += new System.EventHandler(this.eventAlertPanel_Click);
             // 
             // eventOutputLbl
             // 
@@ -163,15 +164,6 @@
             this.eventOutputLbl.Name = "eventOutputLbl";
             this.eventOutputLbl.Size = new System.Drawing.Size(275, 97);
             this.eventOutputLbl.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(51, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 84);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // buttonOptionBox
             // 
@@ -266,6 +258,17 @@
             this.foregroundImage.TabIndex = 8;
             this.foregroundImage.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::Test003.Properties.Resources.mushrooms001;
+            this.pictureBox1.Location = new System.Drawing.Point(51, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 84);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -287,12 +290,12 @@
             this.menuStrip1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.eventAlertPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.buttonOptionBox.ResumeLayout(false);
             this.stage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.middleCharacterBoxImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

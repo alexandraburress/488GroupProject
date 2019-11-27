@@ -306,11 +306,7 @@ namespace Test003
             string description = myDescription+"\n"+myItem.Description;
             Bitmap image = myItem.Image;
 
-            //update image here if image exists in database
-            //if (item.Image != null)
-            //{
-            //   eventAlertPanel.Visible = true;
-            //}
+
 
 
 

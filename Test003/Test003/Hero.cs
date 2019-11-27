@@ -33,6 +33,7 @@ namespace Test003
             Wardrobe[(int)TYPESOFCLOTHING.PANTS] = new Clothing[(int)Enum.GetNames(typeof(PANTSENUM)).Length];
             Wardrobe[(int)TYPESOFCLOTHING.FACE] = new Clothing[(int)Enum.GetNames(typeof(FACES_ENUM)).Length];
             Wardrobe[(int)TYPESOFCLOTHING.HAIR] = new Clothing[(int)Enum.GetNames(typeof(HAIR_ENUM)).Length];
+            Wardrobe[(int)TYPESOFCLOTHING.GLASSES] = new Clothing[(int)Enum.GetNames(typeof(GLASSES_ENUM)).Length];
 
 
 
@@ -132,6 +133,11 @@ namespace Test003
         public Clothing[] Pants
         {
             get { return Wardrobe[(int)TYPESOFCLOTHING.PANTS]; }
+        }
+
+        public Clothing[] Glasses
+        {
+            get { return Wardrobe[(int)TYPESOFCLOTHING.GLASSES]; }
         }
 
         //I plan to include checks for a lack of shirt in the dress up minigame. If the character

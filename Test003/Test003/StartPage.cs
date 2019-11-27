@@ -40,6 +40,10 @@ namespace Test003
             dressUpMagicSchoolStory.addMiddleCharacterImage(5, noel_think);
             dressUpMagicSchoolStory.addMiddleCharacterImage(6,7, noel_smile);
 
+            //find item
+            Item magicMushrooms = new Item("Magic Mushroom","They're.... magic");
+            dressUpMagicSchoolStory.findItem(3,magicMushrooms);
+
             //add minigame 
             dressUpMagicSchoolStory.addMinigame(2);
 
