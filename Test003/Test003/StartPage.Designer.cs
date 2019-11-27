@@ -111,6 +111,7 @@
             this.Controls.Add(this.newGameBtn);
             this.Name = "StartPage";
             this.Text = "Magic School Dress Up";
+            this.Load += new System.EventHandler(this.StartPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

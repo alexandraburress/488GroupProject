@@ -86,5 +86,10 @@ namespace Test003
         {
             Application.Exit();
         }
+
+        private void StartPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
