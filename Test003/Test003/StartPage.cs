@@ -15,12 +15,14 @@ namespace Test003
         Story glamorLairStory = GameData.initilizeGlamorHobosAdventure();
         List<Story> magicSchoolStories = new List<Story>();
 
+
+        //declare main character
+        Hero henry = new Hero();
+
         public StartPage()
         {
             InitializeComponent();
             
-            //declare main character
-            Hero henry = new Hero();
 
             //add some common character images
             Bitmap james_think = Properties.Resources.James_Green_Think_full;
@@ -94,6 +96,17 @@ namespace Test003
         private void StartPage_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void addMinigame(Story story, int position)
+        {
+
+            story.addMinigame(position);
+
+            //update image for future references for Henry based on how minigame has altered hero
+            //I have these as sepeate parts because there may be some instances where I 
+            //want to use a dressed model in one part of the game and don't want the data to transfer
+            henry.DressedHero=henry.dressHero();
         }
     }
 }

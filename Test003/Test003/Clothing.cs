@@ -15,7 +15,9 @@ namespace Test003
         SHIRT,
         PANTS,
         HAIR,
-        GLASSES
+        GLASSES,
+        SOCKS,
+        SHOES
     }
 
     public enum SHIRTSENUM
@@ -44,8 +46,21 @@ namespace Test003
     {
         RED_AND_GOLD,SUNGLASSES_BLACK
     }
+    
+    public enum SOCKS_ENUM
+    {
 
-              
+        PINK    
+    }
+
+    public enum SHOES_ENUM
+    {
+
+        CLOGS_BROWN
+
+    }
+
+
 
     public class Clothing
     {
@@ -117,6 +132,20 @@ namespace Test003
 
         }
 
+
+        public static Clothing[] Shoes
+        {
+            get { return Wardrobe[(int)TYPESOFCLOTHING.SHOES]; }
+
+        }
+
+
+        public static Clothing[] Socks
+        {
+            get { return Wardrobe[(int)TYPESOFCLOTHING.SOCKS]; }
+
+        }
+
         public static Clothing[][] Wardrobe
         {
             get {
@@ -127,11 +156,13 @@ namespace Test003
                 //initlizie wardrobe array with first position being size of TYPESOF CLOTHING ENUM
                 //setting second  number as maximum number of clothing pieces in here
                 Clothing[][]Wardrobe = new Clothing[clothingTypeSize][];
-                Wardrobe[(int)TYPESOFCLOTHING.SHIRT] = initilizeShirts();
-                Wardrobe[(int)TYPESOFCLOTHING.PANTS] = initilizePants();
-                Wardrobe[(int)TYPESOFCLOTHING.FACE] = initilizeFaces();
-                Wardrobe[(int)TYPESOFCLOTHING.HAIR] = initilizeHair();
-                Wardrobe[(int)TYPESOFCLOTHING.GLASSES] = initilizeGlasses();
+                Wardrobe[(int)TYPESOFCLOTHING.SHIRT] = initializeShirts();
+                Wardrobe[(int)TYPESOFCLOTHING.PANTS] = initializePants();
+                Wardrobe[(int)TYPESOFCLOTHING.FACE] = initializeFaces();
+                Wardrobe[(int)TYPESOFCLOTHING.HAIR] = initializeHair();
+                Wardrobe[(int)TYPESOFCLOTHING.GLASSES] = initializeGlasses();
+                Wardrobe[(int)TYPESOFCLOTHING.SHOES] = initializeShoes();
+                Wardrobe[(int)TYPESOFCLOTHING.SOCKS] = initializeSocks();
 
                 return Wardrobe;
             }
@@ -139,7 +170,7 @@ namespace Test003
 
         //intilizing the items in the clothing arrays
 
-        private static Clothing[] initilizeFaces()
+        private static Clothing[] initializeFaces()
         {
             Clothing[] clothing = new Clothing[(int)Enum.GetNames(typeof(FACES_ENUM)).Length];
             clothing[(int)FACES_ENUM.DERP] = new Clothing("Derp Face", Properties.Resources.face_derp_001);
@@ -151,7 +182,7 @@ namespace Test003
         }
 
 
-        private static Clothing[] initilizeShirts()
+        private static Clothing[] initializeShirts()
         {
             Clothing[] shirts = new Clothing[(int)Enum.GetNames(typeof(SHIRTSENUM)).Length];
             shirts[(int)SHIRTSENUM.WEAVY_BLUE] = new Clothing("Wavy Blue Shirt", Properties.Resources.shirt_wavy_blue);
@@ -162,7 +193,7 @@ namespace Test003
             return shirts;
         }
 
-        private static Clothing[] initilizePants()
+        private static Clothing[] initializePants()
         {
             Clothing[] clothing = new Clothing[(int)Enum.GetNames(typeof(PANTSENUM)).Length];
             clothing[(int)PANTSENUM.SKIRT_BLUE] = new Clothing("Blue Skirt", Properties.Resources.pants_skirt_blue);
@@ -170,7 +201,7 @@ namespace Test003
 
             return clothing;
         }
-        private static Clothing[] initilizeHair()
+        private static Clothing[] initializeHair()
         {
             Clothing[] clothing = new Clothing[(int)Enum.GetNames(typeof(HAIR_ENUM)).Length];
             clothing[(int)HAIR_ENUM.CURLY_PURPLE] = new Clothing("Wavy Purple Hair", Properties.Resources.hair_curly_purple);
@@ -181,7 +212,7 @@ namespace Test003
             return clothing;
         }
 
-        private static Clothing[] initilizeGlasses()
+        private static Clothing[] initializeGlasses()
         {
             Clothing[] clothing = new Clothing[(int)Enum.GetNames(typeof(GLASSES_ENUM)).Length];
             clothing[(int)GLASSES_ENUM.RED_AND_GOLD] = new Clothing("Red and Gold Glasses", Properties.Resources.glasses_gold_and_red);
@@ -191,6 +222,21 @@ namespace Test003
             return clothing;
         }
 
+        private static Clothing[] initializeShoes()
+        {
+
+            Clothing[] clothing = new Clothing[(int)Enum.GetNames(typeof(SHOES_ENUM)).Length];
+            clothing[(int)SHOES_ENUM.CLOGS_BROWN] = new Clothing("Brown Clogs", Properties.Resources.shoes_clogs_brown);
+            return clothing;
+        }
+
+        private static Clothing[] initializeSocks()
+        {
+
+            Clothing[] clothing = new Clothing[(int)Enum.GetNames(typeof(SOCKS_ENUM)).Length];
+            clothing[(int)SOCKS_ENUM.PINK] = new Clothing("Pink Socks", Properties.Resources.socks_pink);
+            return clothing;
+        }
 
 
     }

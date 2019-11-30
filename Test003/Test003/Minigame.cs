@@ -15,7 +15,7 @@ namespace Test003
     public class Minigame
     {
 
-        
+
         public Minigame(MINIGAME_GAMES minigameType, Hero hero, string loserMessage = "You have lost. Please try again")
         {
             TypeOfGame = minigameType;
@@ -34,10 +34,13 @@ namespace Test003
                 newContest.ShowDialog();
                 CurrentHero.DressedHero = CurrentHero.dressHero();
             }
+            Won = true;
+
+
 
         }
 
-       
+
 
         public bool Won
         {

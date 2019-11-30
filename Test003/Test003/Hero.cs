@@ -13,12 +13,12 @@ namespace Test003
         MALE,
         FAMALE
     }
-    
+
     public class Hero
     {
 
 
-        public Hero(String name="Henry",string nickname="Henrietta",SEX sex=SEX.MALE)
+        public Hero(String name = "Henry", string nickname = "Henrietta", SEX sex = SEX.MALE)
         {
             Name = name;
             Nickname = nickname;
@@ -34,7 +34,8 @@ namespace Test003
             Wardrobe[(int)TYPESOFCLOTHING.FACE] = new Clothing[(int)Enum.GetNames(typeof(FACES_ENUM)).Length];
             Wardrobe[(int)TYPESOFCLOTHING.HAIR] = new Clothing[(int)Enum.GetNames(typeof(HAIR_ENUM)).Length];
             Wardrobe[(int)TYPESOFCLOTHING.GLASSES] = new Clothing[(int)Enum.GetNames(typeof(GLASSES_ENUM)).Length];
-
+            Wardrobe[(int)TYPESOFCLOTHING.SHOES] = new Clothing[(int)Enum.GetNames(typeof(SHOES_ENUM)).Length];
+            Wardrobe[(int)TYPESOFCLOTHING.SOCKS] = new Clothing[(int)Enum.GetNames(typeof(SOCKS_ENUM)).Length];
 
 
             Body = Properties.Resources.Henry004;
@@ -49,7 +50,7 @@ namespace Test003
 
             int outfitTypeNum = (int)TYPESOFCLOTHING.SHIRT;
             int subNum = (int)SHIRTSENUM.WEAVY_BLUE;
-            
+
 
             starterOutfit(outfitTypeNum, subNum);
 
@@ -74,7 +75,7 @@ namespace Test003
             DressedHero = dressHero();
 
             //add a few other pieces to give player some choice in game
-            addToWardrobe((int)TYPESOFCLOTHING.SHIRT,(int)SHIRTSENUM.MAGIC_BLACK);
+            addToWardrobe((int)TYPESOFCLOTHING.SHIRT, (int)SHIRTSENUM.MAGIC_BLACK);
 
         }
 
@@ -115,7 +116,7 @@ namespace Test003
         {
             get;
             set;
-            }
+        }
 
         //wardrobe is to keep track of clothing that henry owns. It should return null
         //where Henry dosen't have that clothing piece yet
@@ -147,7 +148,7 @@ namespace Test003
             get;
         }
 
-        public void addToWardrobe(int clothingTypeEnum,int clothingItemEnum)
+        public void addToWardrobe(int clothingTypeEnum, int clothingItemEnum)
         {
 
             //pull static refrenece to all items from Clothing
@@ -155,7 +156,7 @@ namespace Test003
 
             //assign it to the hero's personal wardrobe.
             //if it isn't in there at all, add it.
-            if (Wardrobe[clothingTypeEnum][clothingItemEnum]==null)
+            if (Wardrobe[clothingTypeEnum][clothingItemEnum] == null)
             {
 
                 Wardrobe[clothingTypeEnum][clothingItemEnum] = workingItem;
@@ -180,11 +181,21 @@ namespace Test003
 
 
             //order of outfit items is important so that the image layers appears in the right order
+            /*
             graphics.DrawImage(Outfit[(int)TYPESOFCLOTHING.FACE].Image, 0, 0, newHero.Size.Width, newHero.Size.Height);
             graphics.DrawImage(Outfit[(int)TYPESOFCLOTHING.PANTS].Image, 0, 0, newHero.Size.Width, newHero.Size.Height);
             graphics.DrawImage(Outfit[(int)TYPESOFCLOTHING.SHIRT].Image, 0, 0, newHero.Size.Width, newHero.Size.Height);
             graphics.DrawImage(Outfit[(int)TYPESOFCLOTHING.HAIR].Image, 0, 0, newHero.Size.Width, newHero.Size.Height);
+            graphics.DrawImage(Outfit[(int)TYPESOFCLOTHING.SHOES].Image, 0, 0, newHero.Size.Width, newHero.Size.Height);
+            graphics.DrawImage(Outfit[(int)TYPESOFCLOTHING.SOCKS].Image, 0, 0, newHero.Size.Width, newHero.Size.Height);
+            */
 
+            updateDrawImage(graphics, newHero, TYPESOFCLOTHING.FACE);
+            updateDrawImage(graphics, newHero, TYPESOFCLOTHING.PANTS);
+            updateDrawImage(graphics, newHero, TYPESOFCLOTHING.SHIRT);
+            updateDrawImage(graphics, newHero, TYPESOFCLOTHING.HAIR);
+            updateDrawImage(graphics, newHero, TYPESOFCLOTHING.SOCKS);
+            updateDrawImage(graphics, newHero, TYPESOFCLOTHING.SHOES);
 
             //draw arm on top off all clothing
             graphics.DrawImage(Properties.Resources.forground_arm, 0, 0, newHero.Size.Width, newHero.Size.Height);
@@ -201,15 +212,31 @@ namespace Test003
 
             return output;
         }
-        
+
+        private void updateDrawImage(Graphics graphics, Bitmap newHero, TYPESOFCLOTHING type)
+        {
+            Clothing clothing = Outfit[(int)type];
+
+            if (clothing != null)
+            {
+                graphics.DrawImage(clothing.Image, 0, 0, newHero.Size.Width, newHero.Size.Height);
+
+            }
+
+        }
+
         public void changeShirt(Clothing clothing)
         {
-            
+
             Outfit[(int)TYPESOFCLOTHING.SHIRT] = clothing;
-            DressedHero=dressHero();
+            DressedHero = dressHero();
 
 
         }
 
+        public void changeClothing(TYPESOFCLOTHING typeOfClothing, Clothing clothing){
+            Outfit[(int)typeOfClothing] = clothing;
+            DressedHero = dressHero();
+        }
     }
 }
