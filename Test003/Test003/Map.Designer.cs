@@ -66,7 +66,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Test003.Properties.Resources.socks_pink;
+            this.pictureBox1.Image = global::Test003.Properties.Resources.LoadingPage;
             this.pictureBox1.Location = new System.Drawing.Point(309, 252);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);

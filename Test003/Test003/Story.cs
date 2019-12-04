@@ -205,6 +205,12 @@ namespace Test003
             set;
         }
 
+        public bool PlayLoadingScreen
+        {
+            get;
+            set;
+        }
+
 
         public string start()
         {
@@ -218,6 +224,30 @@ namespace Test003
             return output;
         }
 
+        public bool hasNext()
+        {
+            int maxPosition = text.Count - 1;
+            if (Position >= maxPosition)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+
+            }
+        }
+
+        public bool hasPrev()
+        {
+            if (Position == 0)
+            {
+                return false;
+            }
+
+            return true;
+
+        }
         //Progresses to the next part of text, 
         //checks for minigames, and other tasks
         public string next()
@@ -237,8 +267,11 @@ namespace Test003
             //if there is a minigame loaded here that hasn't been run, play that now
             else if (thisMinigame != null && thisMinigame.Won==false)
             {
+                PlayLoadingScreen = true;
                 //the outcome of the minigame will update the Won paramater.
                 thisMinigame.start();
+
+                PlayLoadingScreen = false;
 
                 if (thisMinigame.Won == false)
                 {

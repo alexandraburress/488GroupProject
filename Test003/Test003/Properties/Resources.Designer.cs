@@ -243,6 +243,16 @@ namespace Test003.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LoadingPage {
+            get {
+                object obj = ResourceManager.GetObject("LoadingPage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mushrooms001 {
             get {
                 object obj = ResourceManager.GetObject("mushrooms001", resourceCulture);

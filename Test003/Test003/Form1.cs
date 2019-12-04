@@ -24,7 +24,6 @@ namespace Test003
         {
             InitializeComponent();
             myStory = inportStory;
-
         }
 
         public Form1(List<Story> inportStory, int position=0)
@@ -42,8 +41,10 @@ namespace Test003
         {
               //default foreground to false
             foregroundImage.Visible = false;
+            foregroundImage.Image = Properties.Resources.LoadingPage;
             backgroundImage.Controls.Add(middleCharacterBoxImage);
             middleCharacterBoxImage.BackColor = Color.Transparent;
+
 
 
             Graphics graphics = Graphics.FromImage(Properties.Resources.PumpkinFarm001);
@@ -56,6 +57,12 @@ namespace Test003
 
             outputLbl.Text = myStory.start();
 
+        }
+
+        public bool Loading
+        {
+            get;
+            set;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -78,16 +85,96 @@ namespace Test003
 
         }
 
+        private void colorButtonGrey(Button button)
+        {
+            button.ForeColor = Color.Gray;
+
+        }
+
+        private void colorButtonBlack(Button button)
+        {
+            button.ForeColor = Color.Black;
+
+        }
+
+        private void checkButtonColor()
+        {
+            //check if next button should be greyed
+            if (!myStory.hasNext())
+            {
+                colorButtonGrey(nextBtn);
+            }
+            else
+            {
+                colorButtonBlack(nextBtn);
+            }
+
+
+            //check if prev button should be greyed
+            if (!myStory.hasPrev())
+            {
+                colorButtonGrey(prevButton);
+            }
+            else
+            {
+                colorButtonBlack(prevButton);
+            }
+
+
+        }
+
+
+        //indicate the page is loading
+        private void playLoad()
+        {
+            Loading = true;
+            TimeLeft = 10;
+            loadingTimer.Start();
+
+            //set foreground image to loading
+            foregroundImage.BringToFront();
+            foregroundImage.Visible = true;
+        }
+
+        public int TimeLeft
+        {
+            get;
+            set;
+        }
+
+        private void stopLoad()
+        {
+            Loading = false;
+            foregroundImage.Visible = false;
+        }
+
         private void next()
         {
+            if (myStory.Minigames[myStory.Position] != null)
+            {
+                playLoad();
+                nextBtn.ForeColor = Color.Gray;
+                prevButton.ForeColor = Color.Gray;
+            }
+
             if (eventBoxActive == false)
             {
                 outputLbl.Text = myStory.next();
             }
             
 
+
+
             //This has become the method to check for all changes
             checkForImageChange();
+
+            //stop loading if it is playing
+            /*
+            if (Loading)
+            {
+                stopLoad();
+            }
+            */
         }
 
 
@@ -169,7 +256,11 @@ namespace Test003
 
 
             }
-            
+
+            //check for  button change
+            checkButtonColor();
+
+
 
         }
 
@@ -281,6 +372,20 @@ namespace Test003
         {
                 next();
          
+        }
+
+        private void loadingTimer_Tick(object sender, EventArgs e)
+        {
+            //pulled timer tutorial form here https://www.instructables.com/id/How-to-create-a-Splash-Screen-in-C-Visual-Studio/
+
+            if (TimeLeft > 0)
+            {
+                TimeLeft -= 1;
+            }
+            else
+            {
+                loadingTimer.Stop();
+            }
         }
     }
 }

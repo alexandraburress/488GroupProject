@@ -12,6 +12,7 @@ namespace Test003
 {
     public partial class DressUpContest : Form
     {
+        List<ListBox> clothingListBoxes = new List<ListBox>();
         Minigame minigame;
         Hero hero;
 
@@ -31,6 +32,23 @@ namespace Test003
             fillClothingSelectionBox(hairListBox, hero.Wardrobe[(int)TYPESOFCLOTHING.HAIR]);
             fillClothingSelectionBox(shoesListBox, hero.Wardrobe[(int)TYPESOFCLOTHING.SHOES]);
             fillClothingSelectionBox(socksListBox, hero.Wardrobe[(int)TYPESOFCLOTHING.SOCKS]);
+
+            //add each clothing listbox to List item
+            clothingListBoxes.Add(shirtSelectionListBox);
+            clothingListBoxes.Add(pantsListBox);
+            clothingListBoxes.Add(hairListBox);
+            clothingListBoxes.Add(shoesListBox);
+            clothingListBoxes.Add(faceListBox);
+
+            //make sure selected item in each list box is what is already selected
+            foreach (ListBox item in clothingListBoxes)
+            {
+                if (item.Items.Count > 1)
+                {
+                    item.SelectedIndex = 1;
+                }
+
+            }
         }
 
         public int Score{
@@ -78,6 +96,8 @@ namespace Test003
 
         private void DressUpContest_Load(object sender, EventArgs e)
         {
+
+
             dressUpPictureBox.Image = hero.DressedHero;
             Score = 0;
         }

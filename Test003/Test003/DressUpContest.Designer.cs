@@ -35,12 +35,12 @@
             this.pantsTab = new System.Windows.Forms.TabPage();
             this.pantsListBox = new System.Windows.Forms.ListBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.socksListBox = new System.Windows.Forms.ListBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.shoesListBox = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.hairListBox = new System.Windows.Forms.ListBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.faceListBox = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dressUpPictureBox)).BeginInit();
@@ -77,7 +77,7 @@
             this.clothingTabMaster.Name = "clothingTabMaster";
             this.clothingTabMaster.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.clothingTabMaster.SelectedIndex = 0;
-            this.clothingTabMaster.Size = new System.Drawing.Size(523, 231);
+            this.clothingTabMaster.Size = new System.Drawing.Size(523, 395);
             this.clothingTabMaster.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.clothingTabMaster.TabIndex = 3;
             // 
@@ -88,7 +88,7 @@
             this.shirtsTab.Location = new System.Drawing.Point(4, 71);
             this.shirtsTab.Name = "shirtsTab";
             this.shirtsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.shirtsTab.Size = new System.Drawing.Size(515, 156);
+            this.shirtsTab.Size = new System.Drawing.Size(515, 320);
             this.shirtsTab.TabIndex = 0;
             this.shirtsTab.Text = "Shirt";
             this.shirtsTab.ToolTipText = "Shirt";
@@ -100,7 +100,7 @@
             this.shirtSelectionListBox.ItemHeight = 16;
             this.shirtSelectionListBox.Location = new System.Drawing.Point(6, 6);
             this.shirtSelectionListBox.Name = "shirtSelectionListBox";
-            this.shirtSelectionListBox.Size = new System.Drawing.Size(406, 132);
+            this.shirtSelectionListBox.Size = new System.Drawing.Size(406, 292);
             this.shirtSelectionListBox.TabIndex = 6;
             this.shirtSelectionListBox.SelectedIndexChanged += new System.EventHandler(this.shirtSelectionListBox_SelectedIndexChanged);
             // 
@@ -136,6 +136,16 @@
             this.tabPage1.Text = "Socks";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // socksListBox
+            // 
+            this.socksListBox.FormattingEnabled = true;
+            this.socksListBox.ItemHeight = 16;
+            this.socksListBox.Location = new System.Drawing.Point(6, 6);
+            this.socksListBox.Name = "socksListBox";
+            this.socksListBox.Size = new System.Drawing.Size(411, 132);
+            this.socksListBox.TabIndex = 0;
+            this.socksListBox.SelectedIndexChanged += new System.EventHandler(this.socksListBox_SelectedIndexChanged);
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.shoesListBox);
@@ -146,16 +156,6 @@
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "Shoes";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // socksListBox
-            // 
-            this.socksListBox.FormattingEnabled = true;
-            this.socksListBox.ItemHeight = 16;
-            this.socksListBox.Location = new System.Drawing.Point(6, 6);
-            this.socksListBox.Name = "socksListBox";
-            this.socksListBox.Size = new System.Drawing.Size(411, 132);
-            this.socksListBox.TabIndex = 0;
-            this.socksListBox.SelectedIndexChanged += new System.EventHandler(this.socksListBox_SelectedIndexChanged);
             // 
             // shoesListBox
             // 
@@ -178,6 +178,16 @@
             this.tabPage3.Text = "Hair";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // hairListBox
+            // 
+            this.hairListBox.FormattingEnabled = true;
+            this.hairListBox.ItemHeight = 16;
+            this.hairListBox.Location = new System.Drawing.Point(6, 6);
+            this.hairListBox.Name = "hairListBox";
+            this.hairListBox.Size = new System.Drawing.Size(401, 132);
+            this.hairListBox.TabIndex = 0;
+            this.hairListBox.SelectedIndexChanged += new System.EventHandler(this.hairListBox_SelectedIndexChanged);
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.faceListBox);
@@ -188,16 +198,6 @@
             this.tabPage4.TabIndex = 5;
             this.tabPage4.Text = "Make-Up";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // hairListBox
-            // 
-            this.hairListBox.FormattingEnabled = true;
-            this.hairListBox.ItemHeight = 16;
-            this.hairListBox.Location = new System.Drawing.Point(6, 6);
-            this.hairListBox.Name = "hairListBox";
-            this.hairListBox.Size = new System.Drawing.Size(401, 132);
-            this.hairListBox.TabIndex = 0;
-            this.hairListBox.SelectedIndexChanged += new System.EventHandler(this.hairListBox_SelectedIndexChanged);
             // 
             // faceListBox
             // 

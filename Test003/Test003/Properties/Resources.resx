@@ -163,14 +163,14 @@
   <data name="School_A" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\School_A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="James_Green_Think_full" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\James_Green_Think_full.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="GlamorLair001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GlamorLair001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="test_pantsA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\test_pantsA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PumpkinFarm001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PumpkinFarm001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hair_curly_purple" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hair_curly_purple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,6 +187,9 @@
   <data name="James_Green_Vashoom_full" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\James_Green_Vashoom_full.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="shoes_clogs_brown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shoes_clogs_brown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="glasses_gold_and_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glasses_gold_and_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,8 +205,11 @@
   <data name="shirt_magicGirlTop001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shirt_magicGirlTop001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="James_Green_Think_full" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\James_Green_Think_full.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="socks_pink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\socks_pink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PumpkinFarm001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PumpkinFarm001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="glasses_sun_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glasses_sun_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,10 +226,7 @@
   <data name="hair_brown_bun" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hair_brown_bun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shoes_clogs_brown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shoes_clogs_brown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="socks_pink" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\socks_pink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LoadingPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoadingPage.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
