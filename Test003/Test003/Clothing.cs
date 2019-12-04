@@ -66,7 +66,7 @@ namespace Test003
     {
 
         
-        public Clothing(string name, Bitmap image,int score=0)
+        public Clothing(string name, Bitmap image,int score=1)
         {
             Name = name;
             Image = image;

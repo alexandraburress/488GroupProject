@@ -173,6 +173,8 @@ namespace Test003
 
         }
 
+        
+
         public Choice[] Choices
         {
             get;
@@ -339,13 +341,16 @@ namespace Test003
             string description = myDescription+"\n"+myItem.Description;
             Bitmap image = myItem.Image;
 
-
-
-
-
             Occurance output= new Occurance(name, description, image);
             addOccurance(storyLocation,output);
 
+        }
+
+
+        public void addClothingToWardrobe(int storyLocation, int typeOfClothingEnum, int particularClothingEnum)
+        {
+
+            CurrentHero.addToWardrobe(typeOfClothingEnum, particularClothingEnum);
         }
 
         public void branchStory(Choice choiceA, Choice choiceB=null,Choice choiceC=null)
@@ -359,9 +364,9 @@ namespace Test003
         }
 
         //add a mini game after this position in the text
-        public void addMinigame(int position)
+        public void addMinigame(int position,int minimumScore)
         {
-            Minigame minigame = new Minigame(MINIGAME_GAMES.DRESSUP_CONTEST, CurrentHero);
+            Minigame minigame = new Minigame(MINIGAME_GAMES.DRESSUP_CONTEST, CurrentHero, minimumScore,"You lost the tutorial contest. This does not bode well.");
 
             Minigames[position] = minigame;
             CurrentHero.DressedHero = CurrentHero.dressHero();

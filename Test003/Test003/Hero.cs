@@ -118,6 +118,24 @@ namespace Test003
             set;
         }
 
+        public int OutfitScore
+        {
+            get {
+                return calculateOutfitScore();
+                    }
+        }
+
+        private int calculateOutfitScore()
+        {
+            int score = 0;
+            foreach (Clothing item in Outfit)
+            {
+                if (item != null) { score += item.Score; }
+
+            }
+            return score;
+        }
+
         //wardrobe is to keep track of clothing that henry owns. It should return null
         //where Henry dosen't have that clothing piece yet
         public Clothing[][] Wardrobe
@@ -196,6 +214,8 @@ namespace Test003
             updateDrawImage(graphics, newHero, TYPESOFCLOTHING.HAIR);
             updateDrawImage(graphics, newHero, TYPESOFCLOTHING.SOCKS);
             updateDrawImage(graphics, newHero, TYPESOFCLOTHING.SHOES);
+            updateDrawImage(graphics, newHero, TYPESOFCLOTHING.GLASSES);
+
 
             //draw arm on top off all clothing
             graphics.DrawImage(Properties.Resources.forground_arm, 0, 0, newHero.Size.Width, newHero.Size.Height);

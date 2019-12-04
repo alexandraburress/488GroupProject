@@ -153,6 +153,16 @@ namespace Test003.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap glasses_gold_and_red_small {
+            get {
+                object obj = ResourceManager.GetObject("glasses_gold_and_red_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap glasses_sun_black {
             get {
                 object obj = ResourceManager.GetObject("glasses_sun_black", resourceCulture);

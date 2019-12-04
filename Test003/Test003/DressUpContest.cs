@@ -12,7 +12,6 @@ namespace Test003
 {
     public partial class DressUpContest : Form
     {
-        List<ListBox> clothingListBoxes = new List<ListBox>();
         Minigame minigame;
         Hero hero;
 
@@ -32,23 +31,15 @@ namespace Test003
             fillClothingSelectionBox(hairListBox, hero.Wardrobe[(int)TYPESOFCLOTHING.HAIR]);
             fillClothingSelectionBox(shoesListBox, hero.Wardrobe[(int)TYPESOFCLOTHING.SHOES]);
             fillClothingSelectionBox(socksListBox, hero.Wardrobe[(int)TYPESOFCLOTHING.SOCKS]);
+            fillClothingSelectionBox(glassesListBox, hero.Wardrobe[(int)TYPESOFCLOTHING.GLASSES]);
 
             //add each clothing listbox to List item
-            clothingListBoxes.Add(shirtSelectionListBox);
-            clothingListBoxes.Add(pantsListBox);
-            clothingListBoxes.Add(hairListBox);
-            clothingListBoxes.Add(shoesListBox);
-            clothingListBoxes.Add(faceListBox);
+            shirtSelectionListBox.SelectedIndex = 1;
+            pantsListBox.SelectedIndex = 1;
+            hairListBox.SelectedIndex = 1;
+            shoesListBox.SelectedIndex = 0;
+            faceListBox.SelectedIndex = 1;
 
-            //make sure selected item in each list box is what is already selected
-            foreach (ListBox item in clothingListBoxes)
-            {
-                if (item.Items.Count > 1)
-                {
-                    item.SelectedIndex = 1;
-                }
-
-            }
         }
 
         public int Score{
@@ -112,6 +103,8 @@ namespace Test003
             Clothing clothing = ((KeyValuePair<string, Clothing>)listBox.SelectedItem).Value;
             hero.changeClothing(typeOfClothing, clothing);
             dressUpPictureBox.Image = hero.DressedHero;
+            Score = hero.OutfitScore;
+            scoreLbl.Text = Score.ToString();
         }
 
 
@@ -170,6 +163,17 @@ namespace Test003
 
             Close();
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void glassesListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            changeIndividualClothingItems(glassesListBox, TYPESOFCLOTHING.GLASSES);
         }
     }
 }

@@ -259,5 +259,8 @@
   <ItemGroup>
     <None Include="Resources\LoadingPage.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glasses_gold_and_red_small.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

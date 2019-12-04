@@ -46,8 +46,13 @@ namespace Test003
             Item magicMushrooms = new Item("Magic Mushroom","They're.... magic");
             dressUpMagicSchoolStory.findItem(3,magicMushrooms);
 
+            Item goldenGlasses = new Item("Gold and Red Glasses", "See the world through rose colored glass.", Properties.Resources.glasses_gold_and_red_small);
+            dressUpMagicSchoolStory.findItem(7, goldenGlasses);
+            dressUpMagicSchoolStory.addClothingToWardrobe(7,(int)TYPESOFCLOTHING.GLASSES,(int)GLASSES_ENUM.RED_AND_GOLD);
+
+
             //add minigame 
-            dressUpMagicSchoolStory.addMinigame(2);
+            dressUpMagicSchoolStory.addMinigame(2,4);
 
 
             Story henrysFirstSchoolDay = GameData.initilizeStory("HenrysFirstDayOfSchool.txt", henry, true);
@@ -64,7 +69,7 @@ namespace Test003
             Story ch2_learnMagic = GameData.initilizeStory("ch2_learnMagic.txt", henry);
 
             //minigame
-            henrysFirstSchoolDay.addMinigame(9);
+            henrysFirstSchoolDay.addMinigame(9,5);
 
             //Do to how refences work, it's easier to set up the story routes and then connecet them
             Choice choiceGoToGirlsSchool = new Choice("Go To Girl's School", henrysFirstSchoolDay);
@@ -98,10 +103,10 @@ namespace Test003
 
         }
 
-        private void addMinigame(Story story, int position)
+        private void addMinigame(Story story, int position, int minimumScore)
         {
 
-            story.addMinigame(position);
+            story.addMinigame(position,minimumScore);
 
             //update image for future references for Henry based on how minigame has altered hero
             //I have these as sepeate parts because there may be some instances where I 
