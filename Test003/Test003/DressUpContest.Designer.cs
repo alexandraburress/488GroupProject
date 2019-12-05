@@ -42,11 +42,13 @@
             this.hairListBox = new System.Windows.Forms.ListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.faceListBox = new System.Windows.Forms.ListBox();
+            this.glassesTab = new System.Windows.Forms.TabPage();
+            this.glassesListBox = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.scoreLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.glassesTab = new System.Windows.Forms.TabPage();
-            this.glassesListBox = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dressUpPictureBox)).BeginInit();
             this.clothingTabMaster.SuspendLayout();
             this.shirtsTab.SuspendLayout();
@@ -61,9 +63,10 @@
             // dressUpPictureBox
             // 
             this.dressUpPictureBox.Image = global::Test003.Properties.Resources.Henry004;
-            this.dressUpPictureBox.Location = new System.Drawing.Point(12, 13);
+            this.dressUpPictureBox.Location = new System.Drawing.Point(9, 56);
+            this.dressUpPictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dressUpPictureBox.Name = "dressUpPictureBox";
-            this.dressUpPictureBox.Size = new System.Drawing.Size(481, 391);
+            this.dressUpPictureBox.Size = new System.Drawing.Size(361, 318);
             this.dressUpPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.dressUpPictureBox.TabIndex = 2;
             this.dressUpPictureBox.TabStop = false;
@@ -77,24 +80,27 @@
             this.clothingTabMaster.Controls.Add(this.tabPage3);
             this.clothingTabMaster.Controls.Add(this.tabPage4);
             this.clothingTabMaster.Controls.Add(this.glassesTab);
+            this.clothingTabMaster.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clothingTabMaster.ItemSize = new System.Drawing.Size(70, 67);
-            this.clothingTabMaster.Location = new System.Drawing.Point(499, 13);
+            this.clothingTabMaster.Location = new System.Drawing.Point(374, 56);
+            this.clothingTabMaster.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.clothingTabMaster.Multiline = true;
             this.clothingTabMaster.Name = "clothingTabMaster";
             this.clothingTabMaster.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.clothingTabMaster.SelectedIndex = 0;
-            this.clothingTabMaster.Size = new System.Drawing.Size(523, 395);
+            this.clothingTabMaster.Size = new System.Drawing.Size(495, 321);
             this.clothingTabMaster.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.clothingTabMaster.TabIndex = 3;
             // 
             // shirtsTab
             // 
-            this.shirtsTab.BackColor = System.Drawing.Color.Black;
+            this.shirtsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.shirtsTab.Controls.Add(this.shirtSelectionListBox);
             this.shirtsTab.Location = new System.Drawing.Point(4, 71);
+            this.shirtsTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.shirtsTab.Name = "shirtsTab";
-            this.shirtsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.shirtsTab.Size = new System.Drawing.Size(515, 320);
+            this.shirtsTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.shirtsTab.Size = new System.Drawing.Size(487, 246);
             this.shirtsTab.TabIndex = 0;
             this.shirtsTab.Text = "Shirt";
             this.shirtsTab.ToolTipText = "Shirt";
@@ -102,182 +108,252 @@
             // 
             // shirtSelectionListBox
             // 
+            this.shirtSelectionListBox.BackColor = System.Drawing.Color.LemonChiffon;
+            this.shirtSelectionListBox.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shirtSelectionListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.shirtSelectionListBox.FormattingEnabled = true;
-            this.shirtSelectionListBox.ItemHeight = 16;
-            this.shirtSelectionListBox.Location = new System.Drawing.Point(6, 6);
+            this.shirtSelectionListBox.ItemHeight = 24;
+            this.shirtSelectionListBox.Location = new System.Drawing.Point(4, 5);
+            this.shirtSelectionListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.shirtSelectionListBox.Name = "shirtSelectionListBox";
-            this.shirtSelectionListBox.Size = new System.Drawing.Size(406, 292);
+            this.shirtSelectionListBox.Size = new System.Drawing.Size(306, 220);
             this.shirtSelectionListBox.TabIndex = 6;
             this.shirtSelectionListBox.SelectedIndexChanged += new System.EventHandler(this.shirtSelectionListBox_SelectedIndexChanged);
             // 
             // pantsTab
             // 
+            this.pantsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pantsTab.Controls.Add(this.pantsListBox);
             this.pantsTab.Location = new System.Drawing.Point(4, 71);
+            this.pantsTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pantsTab.Name = "pantsTab";
-            this.pantsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.pantsTab.Size = new System.Drawing.Size(515, 320);
+            this.pantsTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pantsTab.Size = new System.Drawing.Size(487, 246);
             this.pantsTab.TabIndex = 1;
             this.pantsTab.Text = "Pants";
-            this.pantsTab.UseVisualStyleBackColor = true;
             // 
             // pantsListBox
             // 
+            this.pantsListBox.BackColor = System.Drawing.Color.LemonChiffon;
+            this.pantsListBox.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pantsListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pantsListBox.FormattingEnabled = true;
-            this.pantsListBox.ItemHeight = 16;
-            this.pantsListBox.Location = new System.Drawing.Point(7, 6);
+            this.pantsListBox.ItemHeight = 24;
+            this.pantsListBox.Location = new System.Drawing.Point(5, 5);
+            this.pantsListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pantsListBox.Name = "pantsListBox";
-            this.pantsListBox.Size = new System.Drawing.Size(405, 260);
+            this.pantsListBox.Size = new System.Drawing.Size(306, 220);
             this.pantsListBox.TabIndex = 7;
             this.pantsListBox.SelectedIndexChanged += new System.EventHandler(this.pantsListBox_SelectedIndexChanged);
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage1.Controls.Add(this.socksListBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 71);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(515, 320);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Size = new System.Drawing.Size(487, 246);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Socks";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // socksListBox
             // 
+            this.socksListBox.BackColor = System.Drawing.Color.LemonChiffon;
+            this.socksListBox.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.socksListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.socksListBox.FormattingEnabled = true;
-            this.socksListBox.ItemHeight = 16;
-            this.socksListBox.Location = new System.Drawing.Point(6, 6);
+            this.socksListBox.ItemHeight = 24;
+            this.socksListBox.Location = new System.Drawing.Point(4, 5);
+            this.socksListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.socksListBox.Name = "socksListBox";
-            this.socksListBox.Size = new System.Drawing.Size(411, 276);
+            this.socksListBox.Size = new System.Drawing.Size(306, 220);
             this.socksListBox.TabIndex = 0;
             this.socksListBox.SelectedIndexChanged += new System.EventHandler(this.socksListBox_SelectedIndexChanged);
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage2.Controls.Add(this.shoesListBox);
             this.tabPage2.Location = new System.Drawing.Point(4, 71);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(515, 320);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Size = new System.Drawing.Size(487, 246);
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "Shoes";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // shoesListBox
             // 
+            this.shoesListBox.BackColor = System.Drawing.Color.LemonChiffon;
+            this.shoesListBox.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shoesListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.shoesListBox.FormattingEnabled = true;
-            this.shoesListBox.ItemHeight = 16;
-            this.shoesListBox.Location = new System.Drawing.Point(3, 6);
+            this.shoesListBox.ItemHeight = 24;
+            this.shoesListBox.Location = new System.Drawing.Point(4, 4);
+            this.shoesListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.shoesListBox.Name = "shoesListBox";
-            this.shoesListBox.Size = new System.Drawing.Size(420, 276);
+            this.shoesListBox.Size = new System.Drawing.Size(306, 220);
             this.shoesListBox.TabIndex = 0;
             this.shoesListBox.SelectedIndexChanged += new System.EventHandler(this.shoesListBox_SelectedIndexChanged);
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage3.Controls.Add(this.hairListBox);
             this.tabPage3.Location = new System.Drawing.Point(4, 71);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(515, 320);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Size = new System.Drawing.Size(487, 246);
             this.tabPage3.TabIndex = 4;
             this.tabPage3.Text = "Hair";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // hairListBox
             // 
+            this.hairListBox.BackColor = System.Drawing.Color.LemonChiffon;
+            this.hairListBox.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hairListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.hairListBox.FormattingEnabled = true;
-            this.hairListBox.ItemHeight = 16;
-            this.hairListBox.Location = new System.Drawing.Point(6, 6);
+            this.hairListBox.ItemHeight = 24;
+            this.hairListBox.Location = new System.Drawing.Point(4, 5);
+            this.hairListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.hairListBox.Name = "hairListBox";
-            this.hairListBox.Size = new System.Drawing.Size(401, 132);
+            this.hairListBox.Size = new System.Drawing.Size(306, 220);
             this.hairListBox.TabIndex = 0;
             this.hairListBox.SelectedIndexChanged += new System.EventHandler(this.hairListBox_SelectedIndexChanged);
             // 
             // tabPage4
             // 
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage4.Controls.Add(this.faceListBox);
             this.tabPage4.Location = new System.Drawing.Point(4, 71);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(515, 320);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Size = new System.Drawing.Size(487, 246);
             this.tabPage4.TabIndex = 5;
             this.tabPage4.Text = "Make-Up";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // faceListBox
             // 
+            this.faceListBox.BackColor = System.Drawing.Color.LemonChiffon;
+            this.faceListBox.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.faceListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.faceListBox.FormattingEnabled = true;
-            this.faceListBox.ItemHeight = 16;
-            this.faceListBox.Location = new System.Drawing.Point(7, 6);
+            this.faceListBox.ItemHeight = 24;
+            this.faceListBox.Location = new System.Drawing.Point(5, 5);
+            this.faceListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.faceListBox.Name = "faceListBox";
-            this.faceListBox.Size = new System.Drawing.Size(411, 292);
+            this.faceListBox.Size = new System.Drawing.Size(306, 220);
             this.faceListBox.TabIndex = 0;
             this.faceListBox.SelectedIndexChanged += new System.EventHandler(this.faceListBox_SelectedIndexChanged);
             // 
+            // glassesTab
+            // 
+            this.glassesTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.glassesTab.Controls.Add(this.glassesListBox);
+            this.glassesTab.Location = new System.Drawing.Point(4, 71);
+            this.glassesTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.glassesTab.Name = "glassesTab";
+            this.glassesTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.glassesTab.Size = new System.Drawing.Size(487, 246);
+            this.glassesTab.TabIndex = 6;
+            this.glassesTab.Text = "Glasses";
+            // 
+            // glassesListBox
+            // 
+            this.glassesListBox.BackColor = System.Drawing.Color.LemonChiffon;
+            this.glassesListBox.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.glassesListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.glassesListBox.FormattingEnabled = true;
+            this.glassesListBox.ItemHeight = 24;
+            this.glassesListBox.Location = new System.Drawing.Point(5, 5);
+            this.glassesListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.glassesListBox.Name = "glassesListBox";
+            this.glassesListBox.Size = new System.Drawing.Size(306, 220);
+            this.glassesListBox.TabIndex = 0;
+            this.glassesListBox.SelectedIndexChanged += new System.EventHandler(this.glassesListBox_SelectedIndexChanged);
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(510, 414);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(0)))), ((int)(((byte)(251)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Sitka Subheading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button1.Location = new System.Drawing.Point(437, 385);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(508, 70);
+            this.button1.Size = new System.Drawing.Size(381, 57);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Calculate";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Calculate Contest Result";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // scoreLbl
             // 
             this.scoreLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.scoreLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreLbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.scoreLbl.Location = new System.Drawing.Point(286, 414);
+            this.scoreLbl.Font = new System.Drawing.Font("Sitka Display", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLbl.ForeColor = System.Drawing.Color.Cyan;
+            this.scoreLbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.scoreLbl.Location = new System.Drawing.Point(214, 381);
+            this.scoreLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.scoreLbl.Name = "scoreLbl";
-            this.scoreLbl.Size = new System.Drawing.Size(207, 70);
+            this.scoreLbl.Size = new System.Drawing.Size(156, 57);
             this.scoreLbl.TabIndex = 5;
-            this.scoreLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 414);
+            this.label1.Font = new System.Drawing.Font("Sitka Display", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(0)))), ((int)(((byte)(251)))));
+            this.label1.Location = new System.Drawing.Point(11, 381);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 70);
+            this.label1.Size = new System.Drawing.Size(200, 57);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Score";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Text = "Score:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // glassesTab
+            // label2
             // 
-            this.glassesTab.Controls.Add(this.glassesListBox);
-            this.glassesTab.Location = new System.Drawing.Point(4, 71);
-            this.glassesTab.Name = "glassesTab";
-            this.glassesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.glassesTab.Size = new System.Drawing.Size(515, 320);
-            this.glassesTab.TabIndex = 6;
-            this.glassesTab.Text = "Glasses";
-            this.glassesTab.UseVisualStyleBackColor = true;
+            this.label2.Font = new System.Drawing.Font("Sitka Display", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Cyan;
+            this.label2.Location = new System.Drawing.Point(1, 9);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(419, 57);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Select an Outfit for Henry!";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // glassesListBox
+            // label3
             // 
-            this.glassesListBox.FormattingEnabled = true;
-            this.glassesListBox.ItemHeight = 16;
-            this.glassesListBox.Location = new System.Drawing.Point(7, 6);
-            this.glassesListBox.Name = "glassesListBox";
-            this.glassesListBox.Size = new System.Drawing.Size(379, 244);
-            this.glassesListBox.TabIndex = 0;
-            this.glassesListBox.SelectedIndexChanged += new System.EventHandler(this.glassesListBox_SelectedIndexChanged);
+            this.label3.Font = new System.Drawing.Font("Sitka Subheading", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(0)))), ((int)(((byte)(251)))));
+            this.label3.Location = new System.Drawing.Point(380, 16);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(493, 57);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Chose the best clothes from the wardrobe to gain the most points!";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // DressUpContest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 496);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(866, 449);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.scoreLbl);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.clothingTabMaster);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dressUpPictureBox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DressUpContest";
             this.Text = "DressUpContest";
             this.Load += new System.EventHandler(this.DressUpContest_Load);
@@ -314,5 +390,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage glassesTab;
         private System.Windows.Forms.ListBox glassesListBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
