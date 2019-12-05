@@ -256,10 +256,5 @@
   <ItemGroup>
     <None Include="Resources\socks_pink.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\afd766bb14e20c3ecf12e9c2e8ca42.png" />
-    <Content Include="Resources\NameTest1.png" />
-    <Content Include="Resources\NameTest2.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

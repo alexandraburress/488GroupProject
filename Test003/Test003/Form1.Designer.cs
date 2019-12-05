@@ -39,7 +39,6 @@
             this.nextBtn = new System.Windows.Forms.Button();
             this.eventAlertPanel = new System.Windows.Forms.Panel();
             this.eventOutputLbl = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonOptionBox = new System.Windows.Forms.FlowLayoutPanel();
             this.multipleChoiceABtn = new System.Windows.Forms.Button();
             this.multipleChoiceBBtn = new System.Windows.Forms.Button();
@@ -48,22 +47,22 @@
             this.middleCharacterBoxImage = new System.Windows.Forms.PictureBox();
             this.backgroundImage = new System.Windows.Forms.PictureBox();
             this.foregroundImage = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.eventAlertPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.buttonOptionBox.SuspendLayout();
             this.stage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.middleCharacterBoxImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // outputLbl
             // 
-            this.outputLbl.BackColor = System.Drawing.Color.LemonChiffon;
+            this.outputLbl.BackColor = System.Drawing.Color.FloralWhite;
             this.outputLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.outputLbl.Font = new System.Drawing.Font("Sitka Text", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputLbl.Location = new System.Drawing.Point(22, 447);
             this.outputLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.outputLbl.Name = "outputLbl";
@@ -73,14 +72,14 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.menuStrip1.BackColor = System.Drawing.Color.SeaShell;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(722, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(722, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -92,25 +91,25 @@
             this.loadToolStripMenuItem,
             this.quitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 19);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.saveToolStripMenuItem.Text = "Save";
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.loadToolStripMenuItem.Text = "Load";
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
@@ -126,36 +125,24 @@
             // 
             // prevButton
             // 
-            this.prevButton.BackColor = System.Drawing.Color.Violet;
-            this.prevButton.FlatAppearance.BorderColor = System.Drawing.Color.Magenta;
-            this.prevButton.FlatAppearance.BorderSize = 10;
-            this.prevButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.prevButton.Font = new System.Drawing.Font("Sitka Banner", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prevButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.prevButton.Location = new System.Drawing.Point(2, 2);
             this.prevButton.Margin = new System.Windows.Forms.Padding(2);
             this.prevButton.Name = "prevButton";
             this.prevButton.Size = new System.Drawing.Size(138, 43);
             this.prevButton.TabIndex = 0;
             this.prevButton.Text = "Previous";
-            this.prevButton.UseVisualStyleBackColor = false;
+            this.prevButton.UseVisualStyleBackColor = true;
             this.prevButton.Click += new System.EventHandler(this.prevButton_Click);
             // 
             // nextBtn
             // 
-            this.nextBtn.BackColor = System.Drawing.Color.Violet;
-            this.nextBtn.FlatAppearance.BorderColor = System.Drawing.Color.Magenta;
-            this.nextBtn.FlatAppearance.BorderSize = 10;
-            this.nextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.nextBtn.Font = new System.Drawing.Font("Sitka Banner", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.nextBtn.Location = new System.Drawing.Point(144, 2);
             this.nextBtn.Margin = new System.Windows.Forms.Padding(2);
             this.nextBtn.Name = "nextBtn";
-            this.nextBtn.Size = new System.Drawing.Size(138, 43);
+            this.nextBtn.Size = new System.Drawing.Size(127, 43);
             this.nextBtn.TabIndex = 1;
             this.nextBtn.Text = "Next";
-            this.nextBtn.UseVisualStyleBackColor = false;
+            this.nextBtn.UseVisualStyleBackColor = true;
             this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
             // 
             // eventAlertPanel
@@ -178,17 +165,6 @@
             this.eventOutputLbl.Size = new System.Drawing.Size(275, 97);
             this.eventOutputLbl.TabIndex = 2;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::Test003.Properties.Resources.mushrooms001;
-            this.pictureBox1.Location = new System.Drawing.Point(51, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 84);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // buttonOptionBox
             // 
             this.buttonOptionBox.Controls.Add(this.multipleChoiceABtn);
@@ -203,47 +179,32 @@
             // 
             // multipleChoiceABtn
             // 
-            this.multipleChoiceABtn.BackColor = System.Drawing.Color.Violet;
-            this.multipleChoiceABtn.FlatAppearance.BorderColor = System.Drawing.Color.Magenta;
-            this.multipleChoiceABtn.FlatAppearance.BorderSize = 10;
-            this.multipleChoiceABtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.multipleChoiceABtn.Font = new System.Drawing.Font("Sitka Banner", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.multipleChoiceABtn.Location = new System.Drawing.Point(23, 8);
             this.multipleChoiceABtn.Name = "multipleChoiceABtn";
             this.multipleChoiceABtn.Size = new System.Drawing.Size(440, 85);
             this.multipleChoiceABtn.TabIndex = 0;
             this.multipleChoiceABtn.Text = "button1";
-            this.multipleChoiceABtn.UseVisualStyleBackColor = false;
+            this.multipleChoiceABtn.UseVisualStyleBackColor = true;
             this.multipleChoiceABtn.Click += new System.EventHandler(this.multipleChoiceABtn_Click);
             // 
             // multipleChoiceBBtn
             // 
-            this.multipleChoiceBBtn.BackColor = System.Drawing.Color.Violet;
-            this.multipleChoiceBBtn.FlatAppearance.BorderColor = System.Drawing.Color.Magenta;
-            this.multipleChoiceBBtn.FlatAppearance.BorderSize = 10;
-            this.multipleChoiceBBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.multipleChoiceBBtn.Font = new System.Drawing.Font("Sitka Banner", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.multipleChoiceBBtn.Location = new System.Drawing.Point(23, 99);
             this.multipleChoiceBBtn.Name = "multipleChoiceBBtn";
             this.multipleChoiceBBtn.Size = new System.Drawing.Size(440, 85);
             this.multipleChoiceBBtn.TabIndex = 1;
             this.multipleChoiceBBtn.Text = "button2";
-            this.multipleChoiceBBtn.UseVisualStyleBackColor = false;
+            this.multipleChoiceBBtn.UseVisualStyleBackColor = true;
             this.multipleChoiceBBtn.Click += new System.EventHandler(this.multipleChoiceBBtn_Click);
             // 
             // multipleChoiceCBtn
             // 
-            this.multipleChoiceCBtn.BackColor = System.Drawing.Color.Violet;
-            this.multipleChoiceCBtn.FlatAppearance.BorderColor = System.Drawing.Color.Magenta;
-            this.multipleChoiceCBtn.FlatAppearance.BorderSize = 10;
-            this.multipleChoiceCBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.multipleChoiceCBtn.Font = new System.Drawing.Font("Sitka Banner", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.multipleChoiceCBtn.Location = new System.Drawing.Point(23, 190);
             this.multipleChoiceCBtn.Name = "multipleChoiceCBtn";
             this.multipleChoiceCBtn.Size = new System.Drawing.Size(440, 85);
             this.multipleChoiceCBtn.TabIndex = 2;
             this.multipleChoiceCBtn.Text = "button3";
-            this.multipleChoiceCBtn.UseVisualStyleBackColor = false;
+            this.multipleChoiceCBtn.UseVisualStyleBackColor = true;
             this.multipleChoiceCBtn.Click += new System.EventHandler(this.multipleChoiceCBtn_Click);
             // 
             // stage
@@ -297,11 +258,22 @@
             this.foregroundImage.TabIndex = 8;
             this.foregroundImage.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::Test003.Properties.Resources.mushrooms001;
+            this.pictureBox1.Location = new System.Drawing.Point(51, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 84);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(722, 666);
             this.Controls.Add(this.stage);
             this.Controls.Add(this.eventAlertPanel);
@@ -318,12 +290,12 @@
             this.menuStrip1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.eventAlertPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.buttonOptionBox.ResumeLayout(false);
             this.stage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.middleCharacterBoxImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foregroundImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
