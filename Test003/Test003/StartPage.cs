@@ -12,7 +12,7 @@ namespace Test003
 {
     public partial class StartPage : Form
     {
-        Story glamorLairStory = GameData.initilizeGlamorHobosAdventure();
+        //Story glamorLairStory = GameData.initilizeGlamorHobosAdventure();
         List<Story> magicSchoolStories = new List<Story>();
 
 
@@ -48,7 +48,21 @@ namespace Test003
 
             Item goldenGlasses = new Item("Gold and Red Glasses", "See the world through rose colored glass.", Properties.Resources.glasses_gold_and_red_small);
             dressUpMagicSchoolStory.findItem(7, goldenGlasses);
-            dressUpMagicSchoolStory.addClothingToWardrobe(7,(int)TYPESOFCLOTHING.GLASSES,(int)GLASSES_ENUM.RED_AND_GOLD);
+
+            //add clothing to wardrobe
+            //code designed for future where clothing will not exist in wardrobe until events are passed
+            //at this point in time all clothing is avaliable at the same time
+            dressUpMagicSchoolStory.addClothingToWardrobe((int)TYPESOFCLOTHING.GLASSES, (int)GLASSES_ENUM.RED_AND_GOLD);
+            dressUpMagicSchoolStory.addClothingToWardrobe((int)TYPESOFCLOTHING.GLASSES, (int)GLASSES_ENUM.SUNGLASSES_BLACK);
+            dressUpMagicSchoolStory.addClothingToWardrobe((int)TYPESOFCLOTHING.SHIRT, (int)SHIRTSENUM.TSHIRT_RED);
+            dressUpMagicSchoolStory.addClothingToWardrobe((int)TYPESOFCLOTHING.PANTS, (int)PANTSENUM.JEANS_BLUE);
+            dressUpMagicSchoolStory.addClothingToWardrobe((int)TYPESOFCLOTHING.HAIR, (int)HAIR_ENUM.BRAIDS_BROWN);
+            dressUpMagicSchoolStory.addClothingToWardrobe((int)TYPESOFCLOTHING.HAIR, (int)HAIR_ENUM.PIXIE_BLOND);
+            dressUpMagicSchoolStory.addClothingToWardrobe((int)TYPESOFCLOTHING.FACE, (int)FACES_ENUM.ANIME);
+            dressUpMagicSchoolStory.addClothingToWardrobe((int)TYPESOFCLOTHING.FACE, (int)FACES_ENUM.REALISITC);
+            dressUpMagicSchoolStory.addClothingToWardrobe((int)TYPESOFCLOTHING.SHOES, (int)SHOES_ENUM.CLOGS_BROWN);
+            dressUpMagicSchoolStory.addClothingToWardrobe((int)TYPESOFCLOTHING.SOCKS, (int)SOCKS_ENUM.PINK);
+
 
 
             //add minigame 
@@ -112,6 +126,11 @@ namespace Test003
             //I have these as sepeate parts because there may be some instances where I 
             //want to use a dressed model in one part of the game and don't want the data to transfer
             henry.DressedHero=henry.dressHero();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

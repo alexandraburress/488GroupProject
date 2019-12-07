@@ -37,9 +37,33 @@ namespace Test003
             shirtSelectionListBox.SelectedIndex = 1;
             pantsListBox.SelectedIndex = 1;
             hairListBox.SelectedIndex = 1;
-            shoesListBox.SelectedIndex = 0;
-            faceListBox.SelectedIndex = 1;
+            shoesListBox.SelectedIndex = getHerosOutfitItem(TYPESOFCLOTHING.SHOES);
+            faceListBox.SelectedIndex = 0;// I have removed
 
+        }
+
+        private int getHerosOutfitItem(TYPESOFCLOTHING typeOfClothing)
+        {
+            int storedUniqueItemNumber = 0;
+
+            try
+            {
+                storedUniqueItemNumber = hero.Outfit[(int)typeOfClothing].Saved_ClothingUniqueItemEnumNumer;
+            }
+            catch
+            {
+                //if I fail to return anything from the above search, default to 0 position
+                return 0;
+            }
+            if (typeOfClothing==TYPESOFCLOTHING.FACE)
+            {
+                return storedUniqueItemNumber;
+            }
+            else
+            {
+
+                return storedUniqueItemNumber + 1;
+            }
         }
 
         public int Score{
@@ -53,14 +77,26 @@ namespace Test003
            
             //Guide on how to use Dictonary class: http://net-informations.com/q/faq/combovalue.html
             Dictionary<string, Clothing> shirtDictionary = new Dictionary<string, Clothing>();
-
-            shirtDictionary.Add("Nothing", null);
+            
+            //add a null option for all items except face
+            //it does not make sense the character could remove their own face
+            if(box != faceListBox) shirtDictionary.Add("Nothing", null);
+            
+            
             foreach (Clothing clothingPiece in arrayToFill)
             {
-
+                
                 if (clothingPiece != null)
                 {
-                    shirtDictionary.Add(clothingPiece.Name, clothingPiece);
+                    try
+                    {
+
+                        shirtDictionary.Add(clothingPiece.Name, clothingPiece);
+                    }
+                    catch(ArgumentException)
+                    {
+                        System.Diagnostics.Debug.WriteLine("ArgumentException exception for :" + clothingPiece.Name + "\n may be added to wardrobe in multiple locations");
+                    }
                 }
 
                 box.DataSource = new BindingSource(shirtDictionary, null);

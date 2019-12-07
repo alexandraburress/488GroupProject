@@ -179,10 +179,21 @@ namespace Test003
 
                 Wardrobe[clothingTypeEnum][clothingItemEnum] = workingItem;
 
+
             }
             //Then increase the number availiable. Future updates may allow selling of extras, or combining
 
-            Wardrobe[clothingTypeEnum][clothingItemEnum].Number++;
+            try{
+
+                Wardrobe[clothingTypeEnum][clothingItemEnum].Number++;
+
+            }
+            catch (NullReferenceException)
+            {
+                System.Diagnostics.Debug.WriteLine("NullReferenceException exception for clothingTypeEnum" + clothingTypeEnum+ ", clothingItemEnum: " + clothingItemEnum);
+
+
+            }
 
 
         }
@@ -198,21 +209,12 @@ namespace Test003
 
 
 
-            //order of outfit items is important so that the image layers appears in the right order
-            /*
-            graphics.DrawImage(Outfit[(int)TYPESOFCLOTHING.FACE].Image, 0, 0, newHero.Size.Width, newHero.Size.Height);
-            graphics.DrawImage(Outfit[(int)TYPESOFCLOTHING.PANTS].Image, 0, 0, newHero.Size.Width, newHero.Size.Height);
-            graphics.DrawImage(Outfit[(int)TYPESOFCLOTHING.SHIRT].Image, 0, 0, newHero.Size.Width, newHero.Size.Height);
-            graphics.DrawImage(Outfit[(int)TYPESOFCLOTHING.HAIR].Image, 0, 0, newHero.Size.Width, newHero.Size.Height);
-            graphics.DrawImage(Outfit[(int)TYPESOFCLOTHING.SHOES].Image, 0, 0, newHero.Size.Width, newHero.Size.Height);
-            graphics.DrawImage(Outfit[(int)TYPESOFCLOTHING.SOCKS].Image, 0, 0, newHero.Size.Width, newHero.Size.Height);
-            */
 
             updateDrawImage(graphics, newHero, TYPESOFCLOTHING.FACE);
+            updateDrawImage(graphics, newHero, TYPESOFCLOTHING.SOCKS);
             updateDrawImage(graphics, newHero, TYPESOFCLOTHING.PANTS);
             updateDrawImage(graphics, newHero, TYPESOFCLOTHING.SHIRT);
             updateDrawImage(graphics, newHero, TYPESOFCLOTHING.HAIR);
-            updateDrawImage(graphics, newHero, TYPESOFCLOTHING.SOCKS);
             updateDrawImage(graphics, newHero, TYPESOFCLOTHING.SHOES);
             updateDrawImage(graphics, newHero, TYPESOFCLOTHING.GLASSES);
 

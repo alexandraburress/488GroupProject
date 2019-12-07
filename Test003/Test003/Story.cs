@@ -346,11 +346,22 @@ namespace Test003
 
         }
 
-
-        public void addClothingToWardrobe(int storyLocation, int typeOfClothingEnum, int particularClothingEnum)
+        //when to add clothing to the wardrobe
+        //when paramaterless clothing is added from the get go.
+        //to slove issue with int not allowing null default: https://stackoverflow.com/questions/38488443/why-a-value-of-type-null-cannot-be-used-as-a-default-parameter-with-type-double
+        public void addClothingToWardrobe(int typeOfClothingEnum, int particularClothingEnum, int? storyLocation=null)
         {
+            if (storyLocation==null)
+            {
 
-            CurrentHero.addToWardrobe(typeOfClothingEnum, particularClothingEnum);
+                CurrentHero.addToWardrobe(typeOfClothingEnum, particularClothingEnum);
+            }
+            else //in the future this will be added to some kind of event array so the hero does not have
+            //access to it until the event occurs
+            {
+                CurrentHero.addToWardrobe(typeOfClothingEnum, particularClothingEnum);
+
+            }
         }
 
         public void branchStory(Choice choiceA, Choice choiceB=null,Choice choiceC=null)

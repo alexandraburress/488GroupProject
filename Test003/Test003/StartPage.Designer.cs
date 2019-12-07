@@ -47,10 +47,10 @@
             this.newGameBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.newGameBtn.Font = new System.Drawing.Font("Sitka Subheading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newGameBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.newGameBtn.Location = new System.Drawing.Point(123, 144);
-            this.newGameBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.newGameBtn.Location = new System.Drawing.Point(164, 177);
+            this.newGameBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.newGameBtn.Name = "newGameBtn";
-            this.newGameBtn.Size = new System.Drawing.Size(170, 72);
+            this.newGameBtn.Size = new System.Drawing.Size(227, 89);
             this.newGameBtn.TabIndex = 0;
             this.newGameBtn.Text = "New Game";
             this.newGameBtn.UseVisualStyleBackColor = false;
@@ -62,10 +62,10 @@
             this.loadGameBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.loadGameBtn.Font = new System.Drawing.Font("Sitka Subheading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loadGameBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.loadGameBtn.Location = new System.Drawing.Point(312, 144);
-            this.loadGameBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.loadGameBtn.Location = new System.Drawing.Point(416, 177);
+            this.loadGameBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loadGameBtn.Name = "loadGameBtn";
-            this.loadGameBtn.Size = new System.Drawing.Size(170, 72);
+            this.loadGameBtn.Size = new System.Drawing.Size(227, 89);
             this.loadGameBtn.TabIndex = 1;
             this.loadGameBtn.Text = "Load Game";
             this.loadGameBtn.UseVisualStyleBackColor = false;
@@ -76,10 +76,10 @@
             this.creditsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.creditsBtn.Font = new System.Drawing.Font("Sitka Subheading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.creditsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.creditsBtn.Location = new System.Drawing.Point(123, 228);
-            this.creditsBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.creditsBtn.Location = new System.Drawing.Point(164, 281);
+            this.creditsBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.creditsBtn.Name = "creditsBtn";
-            this.creditsBtn.Size = new System.Drawing.Size(170, 72);
+            this.creditsBtn.Size = new System.Drawing.Size(227, 89);
             this.creditsBtn.TabIndex = 3;
             this.creditsBtn.Text = "Credits";
             this.creditsBtn.UseVisualStyleBackColor = false;
@@ -90,10 +90,10 @@
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.exitBtn.Font = new System.Drawing.Font("Sitka Subheading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.exitBtn.Location = new System.Drawing.Point(312, 228);
-            this.exitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.exitBtn.Location = new System.Drawing.Point(416, 281);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(170, 72);
+            this.exitBtn.Size = new System.Drawing.Size(227, 89);
             this.exitBtn.TabIndex = 4;
             this.exitBtn.Text = "Exit";
             this.exitBtn.UseVisualStyleBackColor = false;
@@ -102,18 +102,20 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 144);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 177);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(128, 156);
+            this.pictureBox2.Size = new System.Drawing.Size(171, 192);
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(470, 144);
+            this.pictureBox3.Location = new System.Drawing.Point(627, 177);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(128, 156);
+            this.pictureBox3.Size = new System.Drawing.Size(171, 192);
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
             // 
@@ -122,19 +124,21 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Sitka Heading", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Cyan;
-            this.label1.Location = new System.Drawing.Point(43, 43);
+            this.label1.ForeColor = System.Drawing.Color.MintCream;
+            this.label1.Location = new System.Drawing.Point(57, 53);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(508, 69);
+            this.label1.Size = new System.Drawing.Size(639, 87);
             this.label1.TabIndex = 9;
             this.label1.Text = "Magic School Dress Up";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // StartPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.creditsBtn);
@@ -142,7 +146,7 @@
             this.Controls.Add(this.newGameBtn);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "StartPage";
             this.Text = "Magic School Dress Up";
             this.Load += new System.EventHandler(this.StartPage_Load);
