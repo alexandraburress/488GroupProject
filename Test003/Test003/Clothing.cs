@@ -189,9 +189,15 @@ namespace Test003
         {
             
             Clothing[] clothing = new Clothing[(int)Enum.GetNames(typeof(FACES_ENUM)).Length];
-            createClothing(clothing, new Clothing("Derp Face", Properties.Resources.face_derp_001, 0), (int)TYPESOFCLOTHING.FACE, (int)FACES_ENUM.DERP);
-            createClothing(clothing, new Clothing("Anime Face", Properties.Resources.face_anime_001, 1), (int)TYPESOFCLOTHING.FACE, (int)FACES_ENUM.ANIME);
-            createClothing(clothing, new Clothing("Realistic Face", Properties.Resources.face_realistic_001, 2), (int)TYPESOFCLOTHING.FACE, (int)FACES_ENUM.REALISITC);
+            createClothing(clothing, 
+                new Clothing("Derp Face", Properties.Resources.face_derp_001, 0), 
+                (int)TYPESOFCLOTHING.FACE, (int)FACES_ENUM.DERP);
+            createClothing(clothing, 
+                new Clothing("Anime Face", Properties.Resources.face_anime_001, 1), 
+                (int)TYPESOFCLOTHING.FACE, (int)FACES_ENUM.ANIME);
+            createClothing(clothing, 
+                new Clothing("Realistic Face", Properties.Resources.face_realistic_001, 2), 
+                (int)TYPESOFCLOTHING.FACE, (int)FACES_ENUM.REALISITC);
             return clothing;
         }
 

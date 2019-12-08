@@ -139,11 +139,6 @@ namespace Test003
             set;
         }
 
-        private void stopLoad()
-        {
-            Loading = false;
-            foregroundImage.Visible = false;
-        }
 
         private void next()
         {
@@ -160,18 +155,9 @@ namespace Test003
             }
             
 
-
-
             //This has become the method to check for all changes
             checkForImageChange();
 
-            //stop loading if it is playing
-            /*
-            if (Loading)
-            {
-                stopLoad();
-            }
-            */
         }
 
 
