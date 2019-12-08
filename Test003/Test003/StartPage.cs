@@ -14,8 +14,6 @@ namespace Test003
     {
         //Story glamorLairStory = GameData.initilizeGlamorHobosAdventure();
         List<Story> magicSchoolStories = new List<Story>();
-
-
         //declare main character
         Hero henry = new Hero();
 
