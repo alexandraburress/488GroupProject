@@ -94,7 +94,6 @@ namespace Test003
 
             magicSchoolStories.Add(dressUpMagicSchoolStory);
             magicSchoolStories.Add(henrysFirstSchoolDay);
-
             magicSchoolStories.Add(ch2_learnFashion);
             magicSchoolStories.Add(ch2_learnMagic);
         }
@@ -115,16 +114,7 @@ namespace Test003
 
         }
 
-        private void addMinigame(Story story, int position, int minimumScore)
-        {
 
-            story.addMinigame(position,minimumScore);
-
-            //update image for future references for Henry based on how minigame has altered hero
-            //I have these as sepeate parts because there may be some instances where I 
-            //want to use a dressed model in one part of the game and don't want the data to transfer
-            henry.DressedHero=henry.dressHero();
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {

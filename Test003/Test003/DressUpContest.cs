@@ -108,18 +108,7 @@ namespace Test003
 
         }
 
-        private void btnWin_Click(object sender, EventArgs e)
-        {
-            minigame.Won = true;
-            hero.dressHero();
-            this.Close();
-        }
-
-        private void btnLose_Click(object sender, EventArgs e)
-        {
-            minigame.Won = false;
-            this.Close();
-        }
+  
 
         private void DressUpContest_Load(object sender, EventArgs e)
         {
