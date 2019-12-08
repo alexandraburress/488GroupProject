@@ -274,8 +274,8 @@ namespace Test003
             {
                 System.Diagnostics.Debug.WriteLine("Out of range exception for :"+name+"\n individualItemEnumNumber="+individualItemEnumNumber);
             }
-            //clothing.Saved_ClothingTypeEnumNumber = typeOfClothingEnumNumber;
-            //clothing.Saved_ClothingUniqueItemEnumNumer = individualItemEnumNumber;
+            clothing.Saved_ClothingTypeEnumNumber = typeOfClothingEnumNumber;
+            clothing.Saved_ClothingUniqueItemEnumNumer = individualItemEnumNumber;
         }
 
     

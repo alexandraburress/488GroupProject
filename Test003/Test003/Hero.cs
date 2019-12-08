@@ -70,12 +70,13 @@ namespace Test003
             subNum = (int)HAIR_ENUM.CURLY_PURPLE;
 
             starterOutfit(outfitTypeNum, subNum);
+            starterOutfit((int)TYPESOFCLOTHING.SOCKS, (int)SOCKS_ENUM.PINK);
+
+            starterOutfit((int)TYPESOFCLOTHING.SHOES, (int)SHOES_ENUM.CLOGS_BROWN);
 
 
             DressedHero = dressHero();
 
-            //add a few other pieces to give player some choice in game
-            addToWardrobe((int)TYPESOFCLOTHING.SHIRT, (int)SHIRTSENUM.MAGIC_BLACK);
 
         }
 

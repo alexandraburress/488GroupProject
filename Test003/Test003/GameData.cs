@@ -49,6 +49,8 @@ namespace Test003
 
 
         //Glamor hobo plot
+        //This was used to start programming the visual novel section before
+        //the magic school story was written
         public static Story initilizeGlamorHobosAdventure()
         {
             Hero glamorHobo = new Hero();

@@ -380,7 +380,6 @@ namespace Test003
             Minigame minigame = new Minigame(MINIGAME_GAMES.DRESSUP_CONTEST, CurrentHero, minimumScore,"You lost the tutorial contest. This does not bode well.");
 
             Minigames[position] = minigame;
-            CurrentHero.DressedHero = CurrentHero.dressHero();
         }
 
 
