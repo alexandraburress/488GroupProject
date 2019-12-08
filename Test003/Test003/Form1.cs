@@ -46,11 +46,8 @@ namespace Test003
             middleCharacterBoxImage.BackColor = Color.Transparent;
 
 
-
-            Graphics graphics = Graphics.FromImage(Properties.Resources.PumpkinFarm001);
-            ControlPaint.DrawBorder(graphics, buttonOptionBox.ClientRectangle,Color.Green,ButtonBorderStyle.Solid);
             //Add details to the button box;
-            buttonOptionBox.BackColor = Color.MintCream;
+            buttonOptionBox.BackColor = Color.Black;
 
             //if I've changed position 0 I need to reload anyway
             checkForImageChange();
